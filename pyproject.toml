@@ -6,6 +6,7 @@ authors = [
     {name = "Sergio Sánchez Ramírez", email = "sergio.sanchez.ramirez+github@bsc.es"},
 ]
 dependencies = [
+    "beautifulsoup4>=4.12.2",
     "scrapy>=2.0",
 ]
 requires-python = ">=3.10"
