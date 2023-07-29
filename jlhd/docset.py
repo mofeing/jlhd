@@ -107,7 +107,7 @@ class Docset:
                         binding = tag.find(class_="docstring-binding")
                         name = binding['id']
                         href = binding['href']
-                        path = os.path.join(root, filename, href)
+                        path = os.path.join(filename, href)
                         type = tag.find(class_="docstring-category").string
                         cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
 
