@@ -119,4 +119,5 @@ class Docset:
                         type = "Section"
                         cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
 
+                    con.commit()
 
