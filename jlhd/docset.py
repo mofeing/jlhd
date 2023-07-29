@@ -105,7 +105,7 @@ class Docset:
                     # register types, functions, methods, ...
                     for tag in soup.find_all(class_="docstring"):
                         binding = tag.find(class_="docstring-binding")
-                        name = binding['id']
+                        name = binding.find("code").string
                         href = binding['href']
                         path = os.path.join(filename, href)
                         type = tag.find(class_="docstring-category").string
