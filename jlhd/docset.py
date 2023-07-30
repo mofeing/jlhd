@@ -107,7 +107,7 @@ class Docset:
                         binding = tag.find(class_="docstring-binding")
                         name = binding.find("code").string
                         href = binding['href']
-                        path = os.path.join(filename, href)
+                        path = os.path.join(os.path.relpath(root, start=content), filename, href)
                         type = tag.find(class_="docstring-category").string
                         cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
 
@@ -115,7 +115,7 @@ class Docset:
                     for tag in soup.select("h1 > .docs-heading-anchor"):
                         name = tag.parent['id']
                         href = tag['href']
-                        path = os.path.join(root, filename, href)
+                        path = os.path.join(os.path.relpath(root, start=content), filename, href)
                         type = "Section"
                         cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
 
