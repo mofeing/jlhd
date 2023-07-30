@@ -105,18 +105,18 @@ class Docset:
                     # register types, functions, methods, ...
                     for tag in soup.find_all(class_="docstring"):
                         binding = tag.find(class_="docstring-binding")
-                        name = binding.find("code").string
+                        name = binding.find("code").string.replace("'", "''")
                         href = binding['href']
-                        path = os.path.join(os.path.relpath(root, start=content), filename, href)
+                        path = os.path.join(os.path.relpath(root, start=content), filename, href).replace("'", "''")
                         type = tag.find(class_="docstring-category").string
                         print(f"\t{name} => {type} @ {path}")
                         cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
 
                     # register sections
                     for tag in soup.select("h1 > .docs-heading-anchor"):
-                        name = tag.parent['id']
+                        name = tag.parent['id'].replace("'", "''")
                         href = tag['href']
-                        path = os.path.join(os.path.relpath(root, start=content), filename, href)
+                        path = os.path.join(os.path.relpath(root, start=content), filename, href).replace("'", "''")
                         type = "Section"
                         print(f"\t{name} => {type} @ {path}")
                         cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
