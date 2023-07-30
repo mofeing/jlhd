@@ -96,11 +96,11 @@ class Docset:
         for root, _, filenames in os.walk(content):
             filenames = list(filter(lambda x: os.path.splitext(x)[-1] == ".html", filenames))
 
-            print(f"{root} => {filenames}")
-
             for filename in filenames:
                 with open(Path(root) / filename, "r") as fh:
                     soup = BeautifulSoup(fh)
+
+                    print(f"{os.path.join(root,filename)}:")
 
                     # register types, functions, methods, ...
                     for tag in soup.find_all(class_="docstring"):
@@ -110,6 +110,7 @@ class Docset:
                         path = os.path.join(os.path.relpath(root, start=content), filename, href)
                         type = tag.find(class_="docstring-category").string
                         cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
+                        print(f"\t{name} => {type} @ {path}")
 
                     # register sections
                     for tag in soup.select("h1 > .docs-heading-anchor"):
@@ -118,6 +119,7 @@ class Docset:
                         path = os.path.join(os.path.relpath(root, start=content), filename, href)
                         type = "Section"
                         cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
+                        print(f"\t{name} => {type} @ {path}")
 
                     con.commit()
 
