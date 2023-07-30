@@ -25,6 +25,7 @@ docset = Docset(
     bundle_name,
     platform_family,
     url,
+    index="index.html",
     allow_js=args.allow_js,
     playground=args.playground,
     fallback_url=args.fallback_url,
