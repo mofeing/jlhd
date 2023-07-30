@@ -98,7 +98,7 @@ class Docset:
 
             for filename in filenames:
                 with open(Path(root) / filename, "r") as fh:
-                    soup = BeautifulSoup(fh)
+                    soup = BeautifulSoup(fh, features="lxml")
 
                     print(f"{os.path.join(root,filename)}:")
 
