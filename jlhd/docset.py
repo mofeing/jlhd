@@ -109,8 +109,8 @@ class Docset:
                         href = binding['href']
                         path = os.path.join(os.path.relpath(root, start=content), filename, href)
                         type = tag.find(class_="docstring-category").string
-                        cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
                         print(f"\t{name} => {type} @ {path}")
+                        cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
 
                     # register sections
                     for tag in soup.select("h1 > .docs-heading-anchor"):
@@ -118,8 +118,8 @@ class Docset:
                         href = tag['href']
                         path = os.path.join(os.path.relpath(root, start=content), filename, href)
                         type = "Section"
-                        cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
                         print(f"\t{name} => {type} @ {path}")
+                        cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
 
                     con.commit()
 
