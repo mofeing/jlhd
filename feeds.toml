@@ -1,0 +1,237 @@
+[pkg.pkg]
+name = "Pkg.jl"
+url = "https://pkgdocs.julialang.org/v1/"
+builds = []
+
+[pkg.chainrules]
+name = "ChainRules.jl"
+url =  "https://juliadiff.org/ChainRulesCore.jl/stable/"
+builds = []
+
+[pkg.exprparsers]
+name = "ExprParsers.jl"
+url = "https://jolin-io.github.io/ExprParsers.jl/stable/"
+builds = []
+
+[pkg.match]
+name = "Match.jl"
+url = "https://juliaservices.github.io/Match.jl/dev/"
+builds = []
+
+[pkg.rematch2]
+name = "Rematch2.jl"
+url = "https://juliaservices.github.io/Rematch2.jl/stable/"
+builds = []
+
+[pkg.binarytraits]
+name = "BinaryTraits.jl"
+url = "https://tk3369.github.io/BinaryTraits.jl/stable/"
+builds = []
+
+[pkg.dynamicexpressions]
+name = "DynamicExpressions.jl"
+url = "https://symbolicml.org/DynamicExpressions.jl/stable/"
+builds = []
+
+[pkg.juliasyntax]
+name = "JuliaSyntax.jl"
+url = "https://julialang.github.io/JuliaSyntax.jl/dev/"
+icon = {url = "https://julialang.org/assets/infra/julia.ico"}
+builds = []
+
+[pkg.julog]
+name = "Julog.jl"
+url = "https://docs.juliahub.com/Julog/TpEtX/0.1.15/"
+builds = []
+
+[pkg.precompiletools]
+name = "PrecompileTools.jl"
+url = "https://julialang.github.io/PrecompileTools.jl/stable/"
+icon = {url = "https://julialang.org/assets/infra/julia.ico"}
+builds = []
+
+[pkg.comonicon]
+name = "Comonicon.jl"
+url = "https://comonicon.org/stable/"
+builds = []
+
+[pkg.folds]
+name = "Folds.jl"
+url = "https://juliafolds.github.io/Folds.jl/stable/"
+builds = []
+
+[pkg.jsserve]
+name = "JSServe.jl"
+url = "https://simondanisch.github.io/JSServe.jl/stable/"
+builds = []
+
+[pkg.octavian]
+name = "Octavian.jl"
+url = "https://octavian.julialinearalgebra.org/stable/"
+builds = []
+
+[pkg.mlstyle]
+name = "MLStyle.jl"
+url = "https://thautwarm.github.io/MLStyle.jl/latest/"
+icon = {url = "https://thautwarm.github.io/MLStyle.jl/latest/_static/favicon.ico"}
+builds = []
+
+[pkg.loweredcodeutils]
+name = "LoweredCodeUtils.jl"
+url = "https://juliadebug.github.io/LoweredCodeUtils.jl/stable/"
+builds = []
+
+[pkg.rocket]
+name = "Rocket.jl"
+url = "https://biaslab.github.io/Rocket.jl/stable/"
+builds = []
+
+[pkg.pikaparser]
+name = "PikaParser.jl"
+url = "https://lcsb-biocore.github.io/PikaParser.jl/stable/"
+builds = []
+
+[pkg.transducers]
+name = "Transducers.jl"
+url = "https://juliafolds.github.io/Transducers.jl/stable/"
+builds = []
+
+[pkg.automa]
+name = "Automa.jl"
+url = "https://biojulia.dev/Automa.jl/stable"
+builds = []
+
+[pkg.kernelabstractions]
+name = "KernelAbstractions.jl"
+url = "https://juliagpu.github.io/KernelAbstractions.jl/stable/"
+builds = []
+
+[pkg.finch]
+name = "Finch.jl"
+url = "http://willowahrens.io/Finch.jl/stable/"
+icon = {url = "http://willowahrens.io/Finch.jl/stable/assets/favicon.ico"}
+builds = []
+
+[pkg.exprtools]
+name = "ExprTools.jl"
+url = "https://invenia.github.io/ExprTools.jl/stable/"
+builds = []
+
+[pkg.polyester]
+name = "Polyester.jl"
+url = "https://juliasimd.github.io/Polyester.jl/stable/"
+builds = []
+
+[pkg.loopvectorization]
+name = "LoopVectorization.jl"
+url = "https://juliasimd.github.io/LoopVectorization.jl/stable/"
+builds = []
+
+[pkg.arrayinterface]
+name = "ArrayInterface.jl"
+url = "https://docs.sciml.ai/ArrayInterface/stable/"
+builds = []
+
+[pkg.cassette]
+name = "Cassette.jl"
+url = "https://julia.mit.edu/Cassette.jl/stable/"
+icon = {file = "icons/Cassette.ico"}
+builds = []
+
+[pkg.blockarrays]
+name = "BlockArrays.jl"
+url = "https://juliaarrays.github.io/BlockArrays.jl/stable/"
+builds = []
+
+[pkg.papi]
+name = "PAPI.jl"
+url = "https://juliaperf.github.io/PAPI.jl/stable/"
+builds = []
+
+[pkg.tensorkit]
+name = "TensorKit.jl"
+url = "https://jutho.github.io/TensorKit.jl/stable/"
+icon = {file = "icons/TensorKit.ico"}
+builds = []
+
+[pkg.resumablefunctions]
+name = "ResumableFunctions.jl"
+url = "https://juliadynamics.github.io/ResumableFunctions.jl/stable/"
+builds = []
+
+[pkg.tensoroperations]
+name = "TensorOperations.jl"
+url = "https://jutho.github.io/TensorOperations.jl/stable/"
+icon = {file = "icons/TensorOperations.ico"}
+builds = []
+
+[pkg.dagger]
+name = "Dagger.jl"
+url = "https://juliaparallel.org/Dagger.jl/stable/"
+builds = []
+
+[pkg.staticarrays]
+name = "StaticArrays.jl"
+url = "https://juliaarrays.github.io/StaticArrays.jl/stable/"
+builds = []
+
+[pkg.nnlib]
+name = "NNlib.jl"
+url = "https://fluxml.ai/NNlib.jl/v0.9/"
+icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
+builds = []
+
+[pkg.functors]
+name = "Functors.jl"
+url = "https://fluxml.ai/Functors.jl/v0.4.5/"
+icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
+builds = []
+
+[pkg.optimisers]
+name = "Optimisers.jl"
+url = "https://fluxml.ai/Optimisers.jl/dev/"
+icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
+builds = []
+
+[pkg.propcheck]
+name = "PropCheck.jl"
+url = "https://seelengrab.github.io/PropCheck.jl/stable/"
+builds = []
+
+[pkg.macrotools]
+name = "MacroTools.jl"
+url = "http://fluxml.ai/MacroTools.jl/v0.5.4/"
+icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
+builds = []
+
+[pkg.zygote]
+name = "Zygote.jl"
+url = "https://fluxml.ai/Zygote.jl/v0.6.62/"
+builds = []
+
+[pkg.irtools]
+name = "IRTools.jl"
+url = "http://fluxml.ai/IRTools.jl/v0.4/"
+icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
+builds = []
+
+[pkg.omeinsum]
+name = "OMEinsum.jl"
+url = "https://under-peter.github.io/OMEinsum.jl/v0.3/"
+builds = []
+
+[pkg.metal]
+name = "Metal.jl"
+url = "https://metal.juliagpu.org/stable/"
+builds = []
+
+[pkg.flux]
+name = "Flux.jl"
+url = "https://fluxml.ai/Flux.jl/stable/"
+icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
+builds = []
+
+[pkg.dataframes]
+name = "DataFrames.jl"
+url = "https://dataframes.juliadata.org/v1.6.1/"
+icon = {url = "https://dataframes.juliadata.org/stable/assets/favicon.ico"}
