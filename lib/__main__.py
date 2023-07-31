@@ -1,5 +1,5 @@
 import argparse
-from jlhd.docset import Docset
+from lib.docset import Docset
 
 parser = argparse.ArgumentParser(
     prog="jlhd",
