@@ -12,6 +12,7 @@ builds = []
 
 [ExprParsers]
 name = "ExprParsers.jl"
+uuid = "c5caad1f-83bd-4ce8-ac8e-4b29921e994e"
 url = "https://jolin-io.github.io/ExprParsers.jl/stable/"
 builds = []
 
@@ -28,11 +29,13 @@ builds = []
 
 [BinaryTraits]
 name = "BinaryTraits.jl"
+uuid = "190e46ec-f771-4705-b939-984896f7be0e"
 url = "https://tk3369.github.io/BinaryTraits.jl/stable/"
 builds = []
 
 [DynamicExpressions]
 name = "DynamicExpressions.jl"
+uuid = "a40a106e-89c9-4ca8-8020-a735e8728b6b"
 url = "https://symbolicml.org/DynamicExpressions.jl/stable/"
 builds = []
 
@@ -45,6 +48,7 @@ builds = []
 
 [Julog]
 name = "Julog.jl"
+uuid = "5d8bcb5e-2b2c-4a96-a2b1-d40b3d3c344f"
 url = "https://docs.juliahub.com/Julog/TpEtX/0.1.15/"
 builds = []
 
@@ -57,6 +61,7 @@ builds = []
 
 [Comonicon]
 name = "Comonicon.jl"
+uuid = "863f3e99-da2a-4334-8734-de3dacbe5542"
 url = "https://comonicon.org/stable/"
 builds = []
 
@@ -68,11 +73,13 @@ builds = []
 
 [JSServe]
 name = "JSServe.jl"
+uuid = "824d6782-a2ef-11e9-3a09-e5662e0c26f9"
 url = "https://simondanisch.github.io/JSServe.jl/stable/"
 builds = []
 
 [Octavian]
 name = "Octavian.jl"
+uuid = "6fd5a793-0b7e-452c-907f-f8bfe9c57db4"
 url = "https://octavian.julialinearalgebra.org/stable/"
 builds = []
 
@@ -91,11 +98,13 @@ builds = []
 
 [Rocket]
 name = "Rocket.jl"
+uuid = "df971d30-c9d6-4b37-b8ff-e965b2cb3a40"
 url = "https://biaslab.github.io/Rocket.jl/stable/"
 builds = []
 
 [PikaParser]
 name = "PikaParser.jl"
+uuid = "3bbf5609-3e7b-44cd-8549-7c69f321e792"
 url = "https://lcsb-biocore.github.io/PikaParser.jl/stable/"
 builds = []
 
@@ -119,6 +128,7 @@ builds = []
 
 [Finch]
 name = "Finch.jl"
+uuid = "9177782c-1635-4eb9-9bfb-d9dfa25e6bce"
 url = "http://willowahrens.io/Finch.jl/stable/"
 icon = {url = "http://willowahrens.io/Finch.jl/stable/assets/favicon.ico"}
 builds = []
@@ -131,54 +141,64 @@ builds = []
 
 [Polyester]
 name = "Polyester.jl"
+uuid = "f517fe37-dbe3-4b94-8317-1923a5111588"
 url = "https://juliasimd.github.io/Polyester.jl/stable/"
 builds = []
 
 [LoopVectorization]
 name = "LoopVectorization.jl"
+uuid = "bdcacae8-1622-11e9-2a5c-532679323890"
 url = "https://juliasimd.github.io/LoopVectorization.jl/stable/"
 builds = []
 
 [ArrayInterface]
 name = "ArrayInterface.jl"
+uuid = "4fba245c-0d91-5ea0-9b3e-6abc04ee57a9"
 url = "https://docs.sciml.ai/ArrayInterface/stable/"
 builds = []
 
 [Cassette]
 name = "Cassette.jl"
+uuid = "7057c7e9-c182-5462-911a-8362d720325c"
 url = "https://julia.mit.edu/Cassette.jl/stable/"
 icon = {file = "icons/Cassette.ico"}
 builds = []
 
 [BlockArrays]
 name = "BlockArrays.jl"
+uuid = "8e7c35d0-a365-5155-bbbb-fb81a777f24e"
 url = "https://juliaarrays.github.io/BlockArrays.jl/stable/"
 builds = []
 
 [PAPI]
 name = "PAPI.jl"
+uuid = "c3f66453-0ce3-4e3d-8601-c404262f204f"
 url = "https://juliaperf.github.io/PAPI.jl/stable/"
 builds = []
 
 [TensorKit]
 name = "TensorKit.jl"
+uuid = "07d1fe3e-3e46-537d-9eac-e9e13d0d4cec"
 url = "https://jutho.github.io/TensorKit.jl/stable/"
 icon = {file = "icons/TensorKit.ico"}
 builds = []
 
 [ResumableFunctions]
 name = "ResumableFunctions.jl"
+uuid = "c5292f4c-5179-55e1-98c5-05642aab7184"
 url = "https://juliadynamics.github.io/ResumableFunctions.jl/stable/"
 builds = []
 
 [TensorOperations]
 name = "TensorOperations.jl"
+uuid = "6aa20fa7-93e2-5fca-9bc0-fbd0db3c71a2"
 url = "https://jutho.github.io/TensorOperations.jl/stable/"
 icon = {file = "icons/TensorOperations.ico"}
 builds = []
 
 [Dagger]
 name = "Dagger.jl"
+uuid = "d58978e5-989f-55fb-8d15-ea34adc7bf54"
 url = "https://juliaparallel.org/Dagger.jl/stable/"
 builds = []
 
@@ -211,6 +231,7 @@ builds = []
 
 [PropCheck]
 name = "PropCheck.jl"
+uuid = "ca382230-33be-11e9-0059-d981d03070e4"
 url = "https://seelengrab.github.io/PropCheck.jl/stable/"
 builds = []
 
