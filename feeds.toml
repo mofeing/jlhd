@@ -1,7 +1,7 @@
 [pkg.pkg]
 name = "Pkg.jl"
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
-url = "https://pkgdocs.julialang.org/v1/"
+url = "https://pkgdocs.julialang.org/{version}/"
 builds = []
 
 [pkg.chainrules]
@@ -191,14 +191,14 @@ builds = []
 [pkg.nnlib]
 name = "NNlib.jl"
 uuid = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"
-url = "https://fluxml.ai/NNlib.jl/v0.9/"
+url = "https://fluxml.ai/NNlib.jl/{version}/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
 [pkg.functors]
 name = "Functors.jl"
 uuid = "d9f16b24-f501-4c13-a1f2-28368ffc5196"
-url = "https://fluxml.ai/Functors.jl/v0.4.5/"
+url = "https://fluxml.ai/Functors.jl/{version}/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
@@ -217,27 +217,27 @@ builds = []
 [pkg.macrotools]
 name = "MacroTools.jl"
 uuid = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
-url = "http://fluxml.ai/MacroTools.jl/v0.5.4/"
+url = "http://fluxml.ai/MacroTools.jl/{version}/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
 [pkg.zygote]
 name = "Zygote.jl"
 uuid = "e88e6eb3-aa80-5325-afca-941959d7151f"
-url = "https://fluxml.ai/Zygote.jl/v0.6.62/"
+url = "https://fluxml.ai/Zygote.jl/{version}/"
 builds = []
 
 [pkg.irtools]
 name = "IRTools.jl"
 uuid = "7869d1d1-7146-5819-86e3-90919afe41df"
-url = "http://fluxml.ai/IRTools.jl/v0.4/"
+url = "http://fluxml.ai/IRTools.jl/{version}/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
 [pkg.omeinsum]
 name = "OMEinsum.jl"
 uuid = "ebe7aa44-baf0-506c-a96f-8464559b3922"
-url = "https://under-peter.github.io/OMEinsum.jl/v0.3/"
+url = "https://under-peter.github.io/OMEinsum.jl/{version}/"
 builds = []
 
 [pkg.metal]
