@@ -1,10 +1,12 @@
 [pkg.pkg]
 name = "Pkg.jl"
+uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 url = "https://pkgdocs.julialang.org/v1/"
 builds = []
 
 [pkg.chainrules]
 name = "ChainRules.jl"
+uuid = "082447d4-558c-5d27-93f4-14fc19e9eca2"
 url =  "https://juliadiff.org/ChainRulesCore.jl/stable/"
 builds = []
 
@@ -15,6 +17,7 @@ builds = []
 
 [pkg.match]
 name = "Match.jl"
+uuid = "7eb4fadd-790c-5f42-8a69-bfa0b872bfbf"
 url = "https://juliaservices.github.io/Match.jl/dev/"
 builds = []
 
@@ -35,6 +38,7 @@ builds = []
 
 [pkg.juliasyntax]
 name = "JuliaSyntax.jl"
+uuid = "70703baa-626e-46a2-a12c-08ffd08c73b4"
 url = "https://julialang.github.io/JuliaSyntax.jl/dev/"
 icon = {url = "https://julialang.org/assets/infra/julia.ico"}
 builds = []
@@ -46,6 +50,7 @@ builds = []
 
 [pkg.precompiletools]
 name = "PrecompileTools.jl"
+uuid = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
 url = "https://julialang.github.io/PrecompileTools.jl/stable/"
 icon = {url = "https://julialang.org/assets/infra/julia.ico"}
 builds = []
@@ -57,6 +62,7 @@ builds = []
 
 [pkg.folds]
 name = "Folds.jl"
+uuid = "41a02a25-b8f0-4f67-bc48-60067656b558"
 url = "https://juliafolds.github.io/Folds.jl/stable/"
 builds = []
 
@@ -72,12 +78,14 @@ builds = []
 
 [pkg.mlstyle]
 name = "MLStyle.jl"
+uuid = "d8e11817-5142-5d16-987a-aa16d5891078"
 url = "https://thautwarm.github.io/MLStyle.jl/latest/"
 icon = {url = "https://thautwarm.github.io/MLStyle.jl/latest/_static/favicon.ico"}
 builds = []
 
 [pkg.loweredcodeutils]
 name = "LoweredCodeUtils.jl"
+uuid = "6f1432cf-f94c-5a45-995e-cdbf5db27b0b"
 url = "https://juliadebug.github.io/LoweredCodeUtils.jl/stable/"
 builds = []
 
@@ -93,16 +101,19 @@ builds = []
 
 [pkg.transducers]
 name = "Transducers.jl"
+uuid = "28d57a85-8fef-5791-bfe6-a80928e7c999"
 url = "https://juliafolds.github.io/Transducers.jl/stable/"
 builds = []
 
 [pkg.automa]
 name = "Automa.jl"
+uuid = "67c07d97-cdcb-5c2c-af73-a7f9c32a568b"
 url = "https://biojulia.dev/Automa.jl/stable"
 builds = []
 
 [pkg.kernelabstractions]
 name = "KernelAbstractions.jl"
+uuid = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
 url = "https://juliagpu.github.io/KernelAbstractions.jl/stable/"
 builds = []
 
@@ -114,6 +125,7 @@ builds = []
 
 [pkg.exprtools]
 name = "ExprTools.jl"
+uuid = "e2ba6199-217a-4e67-a87a-7c52f15ade04"
 url = "https://invenia.github.io/ExprTools.jl/stable/"
 builds = []
 
@@ -172,23 +184,27 @@ builds = []
 
 [pkg.staticarrays]
 name = "StaticArrays.jl"
+uuid = "90137ffa-7385-5640-81b9-e52037218182"
 url = "https://juliaarrays.github.io/StaticArrays.jl/stable/"
 builds = []
 
 [pkg.nnlib]
 name = "NNlib.jl"
+uuid = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"
 url = "https://fluxml.ai/NNlib.jl/v0.9/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
 [pkg.functors]
 name = "Functors.jl"
+uuid = "d9f16b24-f501-4c13-a1f2-28368ffc5196"
 url = "https://fluxml.ai/Functors.jl/v0.4.5/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
 [pkg.optimisers]
 name = "Optimisers.jl"
+uuid = "3bd65402-5787-11e9-1adc-39752487f4e2"
 url = "https://fluxml.ai/Optimisers.jl/dev/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
@@ -200,38 +216,45 @@ builds = []
 
 [pkg.macrotools]
 name = "MacroTools.jl"
+uuid = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
 url = "http://fluxml.ai/MacroTools.jl/v0.5.4/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
 [pkg.zygote]
 name = "Zygote.jl"
+uuid = "e88e6eb3-aa80-5325-afca-941959d7151f"
 url = "https://fluxml.ai/Zygote.jl/v0.6.62/"
 builds = []
 
 [pkg.irtools]
 name = "IRTools.jl"
+uuid = "7869d1d1-7146-5819-86e3-90919afe41df"
 url = "http://fluxml.ai/IRTools.jl/v0.4/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
 [pkg.omeinsum]
 name = "OMEinsum.jl"
+uuid = "ebe7aa44-baf0-506c-a96f-8464559b3922"
 url = "https://under-peter.github.io/OMEinsum.jl/v0.3/"
 builds = []
 
 [pkg.metal]
 name = "Metal.jl"
+uuid = "dde4c033-4e86-420c-a63e-0dd931031962"
 url = "https://metal.juliagpu.org/stable/"
 builds = []
 
 [pkg.flux]
 name = "Flux.jl"
+uuid = "587475ba-b771-5e3f-ad9e-33799f191a9c"
 url = "https://fluxml.ai/Flux.jl/stable/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
 [pkg.dataframes]
 name = "DataFrames.jl"
+uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 url = "https://dataframes.juliadata.org/v1.6.1/"
 icon = {url = "https://dataframes.juliadata.org/stable/assets/favicon.ico"}
