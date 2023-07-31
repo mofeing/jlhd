@@ -225,6 +225,7 @@ builds = []
 name = "Zygote.jl"
 uuid = "e88e6eb3-aa80-5325-afca-941959d7151f"
 url = "https://fluxml.ai/Zygote.jl/{version}/"
+icon = {file = "icons/Zygote.ico"}
 builds = []
 
 [IRTools]
