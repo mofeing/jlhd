@@ -258,3 +258,15 @@ name = "DataFrames.jl"
 uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 url = "https://dataframes.juliadata.org/v1.6.1/"
 icon = {url = "https://dataframes.juliadata.org/stable/assets/favicon.ico"}
+
+[pkg.tenet]
+name = "Tenet.jl"
+uuid = "85d41934-b9cd-44e1-8730-56d86f15f3ec"
+registry = "bsc-quantic/Registry"
+url = "https://bsc-quantic.github.io/Tenet.jl/stable/"
+
+[pkg.einexprs]
+name = "EinExprs.jl"
+uuid = "b1794770-133b-4de1-afb4-526377e9f4c5"
+registry = "bsc-quantic/Registry"
+url = "https://bsc-quantic.github.io/EinExprs.jl/stable/"
