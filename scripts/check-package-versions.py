@@ -46,5 +46,5 @@ if len(targets) != 0:
     json.dump({'include': [{
         'name': name,
         'version': f"{version.major}.{version.minor}.{version.patch}",
-        **registry['name'],
-    } for name, version in targets.items()]}, args.output)
+        **pkgs[name],
+     } for name, version in targets.items()]}, args.output)
