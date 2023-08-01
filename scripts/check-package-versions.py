@@ -25,7 +25,7 @@ for pkg, info in pkgs.items():
     try:
         paths[pkg] = registry['packages'][info['uuid']]['path']
     except tomlkit.exceptions.NonExistentKey:
-        print(f"{pkg}[{info['uuid']}] not found in General registry")
+        sys.stderr.write(f"{pkg}[{info['uuid']}] not found in General registry\n")
 
 # keep outdated docset packages
 # NOTE don't update `packages.toml` now
