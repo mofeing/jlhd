@@ -22,11 +22,6 @@ uuid = "7eb4fadd-790c-5f42-8a69-bfa0b872bfbf"
 url = "https://juliaservices.github.io/Match.jl/dev/"
 builds = []
 
-[Rematch2]
-name = "Rematch2.jl"
-url = "https://juliaservices.github.io/Rematch2.jl/stable/"
-builds = []
-
 [BinaryTraits]
 name = "BinaryTraits.jl"
 uuid = "190e46ec-f771-4705-b939-984896f7be0e"
@@ -280,15 +275,18 @@ name = "DataFrames.jl"
 uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 url = "https://dataframes.juliadata.org/v1.6.1/"
 icon = {url = "https://dataframes.juliadata.org/stable/assets/favicon.ico"}
+builds = []
 
 [Tenet]
 name = "Tenet.jl"
 uuid = "85d41934-b9cd-44e1-8730-56d86f15f3ec"
 registry = "bsc-quantic/Registry"
 url = "https://bsc-quantic.github.io/Tenet.jl/stable/"
+builds = []
 
 [EinExprs]
 name = "EinExprs.jl"
 uuid = "b1794770-133b-4de1-afb4-526377e9f4c5"
 registry = "bsc-quantic/Registry"
 url = "https://bsc-quantic.github.io/EinExprs.jl/stable/"
+builds = []
