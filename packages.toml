@@ -3,7 +3,8 @@ bundle_id = "pkg"
 bundle_name = "Pkg.jl"
 platform_family = "pkg"
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
-url = "https://pkgdocs.julialang.org/{version}/"
+url = "https://pkgdocs.julialang.org/v1/"
+icon = {file = "icons/Pkg.png"}
 builds = []
 
 [ChainRules]
@@ -12,6 +13,7 @@ bundle_name = "ChainRules.jl"
 platform_family = "chainrules"
 uuid = "082447d4-558c-5d27-93f4-14fc19e9eca2"
 url =  "https://juliadiff.org/ChainRulesCore.jl/stable/"
+icon = {file = "icons/ChainRules.png"}
 allow_js = true
 builds = []
 
@@ -87,6 +89,7 @@ bundle_name = "Folds.jl"
 platform_family = "folds"
 uuid = "41a02a25-b8f0-4f67-bc48-60067656b558"
 url = "https://juliafolds.github.io/Folds.jl/stable/"
+icon = {file = "icons/Transducers.png"}
 builds = []
 
 [JSServe]
@@ -103,6 +106,7 @@ bundle_name = "Octavian.jl"
 platform_family = "octavian"
 uuid = "6fd5a793-0b7e-452c-907f-f8bfe9c57db4"
 url = "https://octavian.julialinearalgebra.org/stable/"
+icon = {file = "icons/JuliaLinearAlgebra.png"}
 builds = []
 
 [MLStyle]
@@ -144,6 +148,7 @@ bundle_name = "Transducers.jl"
 platform_family = "transducers"
 uuid = "28d57a85-8fef-5791-bfe6-a80928e7c999"
 url = "https://juliafolds.github.io/Transducers.jl/stable/"
+icon = {file = "icons/Transducers.png"}
 builds = []
 
 [Automa]
@@ -203,6 +208,7 @@ bundle_name = "ArrayInterface.jl"
 platform_family = "arrayinterface"
 uuid = "4fba245c-0d91-5ea0-9b3e-6abc04ee57a9"
 url = "https://docs.sciml.ai/ArrayInterface/stable/"
+icon = {file = "icons/SciML.png"}
 builds = []
 
 [Cassette]
@@ -220,6 +226,7 @@ bundle_name = "BlockArrays.jl"
 platform_family = "blockarrays"
 uuid = "8e7c35d0-a365-5155-bbbb-fb81a777f24e"
 url = "https://juliaarrays.github.io/BlockArrays.jl/stable/"
+icon = {file = "icons/JuliaArrays.png"}
 allow_js = true
 builds = []
 
@@ -275,6 +282,7 @@ bundle_name = "StaticArrays.jl"
 platform_family = "staticarrays"
 uuid = "90137ffa-7385-5640-81b9-e52037218182"
 url = "https://juliaarrays.github.io/StaticArrays.jl/stable/"
+icon = {file = "icons/JuliaArrays.png"}
 builds = []
 
 [NNlib]

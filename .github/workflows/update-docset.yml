@@ -46,7 +46,7 @@ jobs:
             wget "${{ matrix.icon.url }}"
             icon=$(basename "${{ matrix.icon.url }}")
           else
-            icon="icons/Julia.png"
+            icon="icons/Docset-variation.png"
           fi
 
           if [ -n $icon ]; then
