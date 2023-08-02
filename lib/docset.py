@@ -97,7 +97,7 @@ class Docset:
             filenames = list(filter(lambda x: os.path.splitext(x)[-1] == ".html", filenames))
 
             for filename in filenames:
-                with open(Path(root) / filename, "r+", encoding="utf8", errors="ignore") as fh:
+                with open(Path(root) / filename, "r+b", encoding="utf8", errors="ignore") as fh:
                     soup = BeautifulSoup(fh, features="lxml")
 
                     # fix links
