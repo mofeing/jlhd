@@ -110,8 +110,6 @@ class Docset:
                             file = "index.html"
                             tag['href'] = urlunparse((scheme, netloc, os.path.join(folder, file), params, query, fragment))
                     
-                    fh.write(str(soup))
-
                     print(f"{os.path.join(root,filename)}:")
 
                     # register types, functions, methods, ...
@@ -126,12 +124,13 @@ class Docset:
 
                     # register sections
                     for tag in soup.select("h1 > .docs-heading-anchor"):
-                        name = tag.parent['id'].string.replace("'", "''")
+                        name = tag.parent['id'].replace("'", "''")
                         href = tag['href']
                         path = os.path.join(os.path.relpath(root, start=content), filename, href).replace("'", "''")
                         type = "Section"
                         print(f"\t{name} => {type} @ {path}")
                         cursor.execute(f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')")
 
+                    fh.write(str(soup))
                     con.commit()
 
