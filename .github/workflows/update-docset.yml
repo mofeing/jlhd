@@ -29,13 +29,12 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }}
       - id: conditional-icon
-        if: ${{ matrix.icon.url }}
         run: |
           if [ -n '${{ matrix.icon.file }}' ]; then
             icon=${{ matrix.icon.file }}
           elif [ -n '${{ matrix.icon.url }}' ]; then
             wget "${{ matrix.icon.url }}"
-            icon=$(basename "${{ matrix.icon.url }}"
+            icon=$(basename "${{ matrix.icon.url }}")
           fi
 
           if [ -n $icon ]; then
