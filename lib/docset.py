@@ -41,12 +41,12 @@ class Docset:
             <string>{self.platform_family}</string>
             <key>isDashDocset</key>
             <true/>
-            {"""<key>dashIndexFilePath</key>
+            {f"""<key>dashIndexFilePath</key>
             <string>{self.index}</string>
             """ if self.index is not None else ""}
-            {"""<key>DashDocSetFallbackURL</key>
+            {f"""<key>DashDocSetFallbackURL</key>
             <string>{self.fallback_url}</string>""" if self.fallback_url is not None else ""}
-            {"""<key>DashDocSetPlayURL</key>
+            {f"""<key>DashDocSetPlayURL</key>
             <string>{self.playground}</key>""" if self.playground is not None else ""}
             {"""<key>isJavaScriptEnabled</key>
             <true/>""" if self.allow_js else ""}
