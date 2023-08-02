@@ -7,6 +7,7 @@ from lib.spider import DocumenterSpider
 from scrapy.crawler import CrawlerProcess
 import shutil
 from bs4 import BeautifulSoup
+from urllib.parse import urlparse, urlunparse
 
 @dataclass
 class Docset:
@@ -96,8 +97,20 @@ class Docset:
             filenames = list(filter(lambda x: os.path.splitext(x)[-1] == ".html", filenames))
 
             for filename in filenames:
-                with open(Path(root) / filename, "r", encoding="utf8", errors="ignore") as fh:
+                with open(Path(root) / filename, "r+", encoding="utf8", errors="ignore") as fh:
                     soup = BeautifulSoup(fh, features="lxml")
+
+                    # fix links
+                    # NOTE if deployed with folder organization, "index.html" is not appended to links
+                    for tag in soup.select("a"):
+                        scheme, netloc, path, params, query, fragment = urlparse(tag['href'])
+                        folder, file = os.path.split(path)
+                        
+                        if not file:
+                            file = "index.html"
+                            tag['href'] = urlunparse((scheme, netloc, os.path.join(folder, file), params, query, fragment))
+                    
+                    fh.write(soup.prettify("utf-8"))
 
                     print(f"{os.path.join(root,filename)}:")
 
