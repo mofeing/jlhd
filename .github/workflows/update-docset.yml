@@ -30,4 +30,5 @@ jobs:
       - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }}
       - uses: actions/upload-artifact@v3
         with:
+          name: ${{ matrix.bundle_name }}.docset
           path: ${{ matrix.bundle_name }}.docset
