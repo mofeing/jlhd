@@ -55,8 +55,8 @@ jobs:
       - uses: FedericoCarboni/setup-ffmpeg@v2
         if: ${{ steps.conditional-icon.outputs.icon }}
       - run: |
-          ffmpeg -i $icon -vf scale=16:16 ${{ matrix.bundle_name }}.docset/icon.png
-          ffmpeg -i $icon -vf scale=32:32 ${{ matrix.bundle_name }}.docset/icon@2x.png
+          ffmpeg -i $icon -vf scale=16:-1:flags=lanczos,format=rgba,pad=16:16:(ow-iw)/2:(oh-ih)/2:color=#00000000 ${{ matrix.bundle_name }}.docset/icon.png
+          ffmpeg -i $icon -vf scale=32:-1:flags=lanczos,format=rgba,pad=32:32:(ow-iw)/2:(oh-ih)/2:color=#00000000 ${{ matrix.bundle_name }}.docset/icon@2x.png
         if: ${{ steps.conditional-icon.outputs.icon }}
         env:
           icon: ${{ steps.conditional-icon.outputs.icon }}
