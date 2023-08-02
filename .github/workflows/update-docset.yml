@@ -80,9 +80,9 @@ jobs:
         with:
           name: ${{ matrix.bundle_name }}.docset
       - run: tar --exclude='.DS_Store' -cvzf ${{ matrix.bundle_name }}.tgz ${{ matrix.bundle_name }}.docset
-      - run: gh repo fork Kapeli/Dash-User-Contributions --clone
+      - run: gh repo clone mofeing/Dash-User-Contributions
         env:
-          GH_TOKEN: ${{ secrets.DASH_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
       - run: |
           branch="${{ matrix.bundle_id }}-${{ matrix.version }}-$(sha256sum ${{ matrix.bundle_name }}.tgz | head -c 10)"
           cd Dash-User-Contributions
