@@ -102,7 +102,7 @@ class Docset:
 
                     # fix links
                     # NOTE if deployed with folder organization, "index.html" is not appended to links
-                    for tag in soup.select("a"):
+                    for tag in soup.find_all("a", href=True):
                         scheme, netloc, path, params, query, fragment = urlparse(tag['href'])
                         folder, file = os.path.split(path)
                         
