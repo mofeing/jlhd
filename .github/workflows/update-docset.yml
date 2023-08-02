@@ -29,7 +29,7 @@ jobs:
           python-version: '3.11.4'
           cache: 'pip'
       - run: pip install -r requirements.txt
-      - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }}
+      - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }} --version=${{ matrix.version }}
       - id: conditional-icon
         run: |
           if [ -n '${{ matrix.icon.file }}' ]; then

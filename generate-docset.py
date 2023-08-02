@@ -13,12 +13,13 @@ parser.add_argument("url")
 parser.add_argument("--allow_js", action="store_true")
 parser.add_argument("--playground")
 parser.add_argument("--fallback_url")
+parser.add_argument("--version", default=None)
 
 args = parser.parse_args()
 bundle_id = args.bundle_id
 bundle_name = args.bundle_name
 platform_family = args.platform_family
-url = args.url
+url = args.url.format(version="v" + args.version)
 
 fallback_url = args.fallback_url if hasattr(args, 'fallback_url') else url
 
