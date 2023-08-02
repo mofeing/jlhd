@@ -52,7 +52,7 @@ bundle_name = "JuliaSyntax.jl"
 platform_family = "juliasyntax"
 uuid = "70703baa-626e-46a2-a12c-08ffd08c73b4"
 url = "https://julialang.github.io/JuliaSyntax.jl/dev/"
-icon = {url = "https://julialang.org/assets/infra/julia.ico"}
+icon = {file = "icons/Julia.png"}
 builds = []
 
 [Julog]
@@ -69,7 +69,7 @@ bundle_name = "PrecompileTools.jl"
 platform_family = "precompiletools"
 uuid = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
 url = "https://julialang.github.io/PrecompileTools.jl/stable/"
-icon = {url = "https://julialang.org/assets/infra/julia.ico"}
+icon = {file = "icons/Julia.png"}
 builds = []
 
 [Comonicon]
@@ -159,6 +159,7 @@ bundle_name = "KernelAbstractions.jl"
 platform_family = "kernelabstractions"
 uuid = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
 url = "https://juliagpu.github.io/KernelAbstractions.jl/stable/"
+icon = {file = "icons/JuliaGPU.png"}
 builds = []
 
 [Finch]
@@ -192,6 +193,7 @@ bundle_name = "LoopVectorization.jl"
 platform_family = "loopvectorization"
 uuid = "bdcacae8-1622-11e9-2a5c-532679323890"
 url = "https://juliasimd.github.io/LoopVectorization.jl/stable/"
+icon = {file = "icons/LoopVectorization.png"}
 builds = []
 
 [ArrayInterface]
@@ -225,6 +227,7 @@ bundle_name = "PAPI.jl"
 platform_family = "papi"
 uuid = "c3f66453-0ce3-4e3d-8601-c404262f204f"
 url = "https://juliaperf.github.io/PAPI.jl/stable/"
+icon = {file = "icons/JuliaPerf.png"}
 builds = []
 
 [TensorKit]
@@ -346,6 +349,7 @@ bundle_name = "Metal.jl"
 platform_family = "metal"
 uuid = "dde4c033-4e86-420c-a63e-0dd931031962"
 url = "https://metal.juliagpu.org/stable/"
+icon = {file = "icons/JuliaGPU.png"}
 builds = []
 
 [Flux]

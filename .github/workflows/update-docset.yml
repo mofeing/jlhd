@@ -37,6 +37,8 @@ jobs:
           elif [ -n '${{ matrix.icon.url }}' ]; then
             wget "${{ matrix.icon.url }}"
             icon=$(basename "${{ matrix.icon.url }}")
+          else
+            icon="icons/Julia.png"
           fi
 
           if [ -n $icon ]; then
