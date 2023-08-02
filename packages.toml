@@ -317,7 +317,7 @@ bundle_id = "macrotools"
 bundle_name = "MacroTools.jl"
 platform_family = "macrotools"
 uuid = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
-url = "http://fluxml.ai/MacroTools.jl/{version}/"
+url = "http://fluxml.ai/MacroTools.jl/stable/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
@@ -336,7 +336,7 @@ bundle_id = "irtools"
 bundle_name = "IRTools.jl"
 platform_family = "irtools"
 uuid = "7869d1d1-7146-5819-86e3-90919afe41df"
-url = "http://fluxml.ai/IRTools.jl/{version}/"
+url = "http://fluxml.ai/IRTools.jl/stable/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 builds = []
 
@@ -345,7 +345,7 @@ bundle_id = "omeinsum"
 bundle_name = "OMEinsum.jl"
 platform_family = "omeinsum"
 uuid = "ebe7aa44-baf0-506c-a96f-8464559b3922"
-url = "https://under-peter.github.io/OMEinsum.jl/{version}/"
+url = "https://under-peter.github.io/OMEinsum.jl/dev/"
 allow_js = true
 builds = []
 
