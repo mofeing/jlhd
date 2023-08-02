@@ -14,11 +14,11 @@ jobs:
         cache: 'pip'
     - run: pip install -r requirements.txt
     - id: setup-matrix
-      run: python scripts/check-package-versions.py -o $GITHUB_OUTPUT
+      run: python check-package-versions.py -o $GITHUB_OUTPUT
   generate-docset:
     needs: query-registry
     runs-on: ubuntu-latest
     strategy:
       matrix: ${{ fromJson(needs.query-registry.outputs.matrix) }}
     steps:
-      - run: python scripts/generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }}
+      - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }}
