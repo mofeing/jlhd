@@ -21,4 +21,10 @@ jobs:
     strategy:
       matrix: ${{ fromJson(needs.query-registry.outputs.matrix) }}
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11.4'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
       - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }}
