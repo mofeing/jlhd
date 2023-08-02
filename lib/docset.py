@@ -97,7 +97,7 @@ class Docset:
             filenames = list(filter(lambda x: os.path.splitext(x)[-1] == ".html", filenames))
 
             for filename in filenames:
-                with open(Path(root) / filename, "r+b", encoding="utf8", errors="ignore") as fh:
+                with open(Path(root) / filename, "r+", encoding="utf8", errors="ignore") as fh:
                     soup = BeautifulSoup(fh, features="lxml")
 
                     # fix links
@@ -110,7 +110,7 @@ class Docset:
                             file = "index.html"
                             tag['href'] = urlunparse((scheme, netloc, os.path.join(folder, file), params, query, fragment))
                     
-                    fh.write(soup.prettify("utf-8"))
+                    fh.write(str(soup))
 
                     print(f"{os.path.join(root,filename)}:")
 
