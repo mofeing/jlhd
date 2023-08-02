@@ -208,7 +208,7 @@ bundle_name = "Cassette.jl"
 platform_family = "cassette"
 uuid = "7057c7e9-c182-5462-911a-8362d720325c"
 url = "https://julia.mit.edu/Cassette.jl/stable/"
-icon = {file = "icons/Cassette.ico"}
+icon = {file = "icons/Cassette.png"}
 builds = []
 
 [BlockArrays]
@@ -233,7 +233,7 @@ bundle_name = "TensorKit.jl"
 platform_family = "tensorkit"
 uuid = "07d1fe3e-3e46-537d-9eac-e9e13d0d4cec"
 url = "https://jutho.github.io/TensorKit.jl/stable/"
-icon = {file = "icons/TensorKit.ico"}
+icon = {file = "icons/TensorKit.png"}
 builds = []
 
 [ResumableFunctions]
@@ -250,7 +250,7 @@ bundle_name = "TensorOperations.jl"
 platform_family = "tensoroperations"
 uuid = "6aa20fa7-93e2-5fca-9bc0-fbd0db3c71a2"
 url = "https://jutho.github.io/TensorOperations.jl/stable/"
-icon = {file = "icons/TensorOperations.ico"}
+icon = {file = "icons/TensorOperations.png"}
 builds = []
 
 [Dagger]
@@ -259,6 +259,7 @@ bundle_name = "Dagger.jl"
 platform_family = "dagger"
 uuid = "d58978e5-989f-55fb-8d15-ea34adc7bf54"
 url = "https://juliaparallel.org/Dagger.jl/stable/"
+icon = {file = "icons/Dagger.png"}
 builds = []
 
 [StaticArrays]
@@ -319,7 +320,7 @@ bundle_name = "Zygote.jl"
 platform_family = "zygote"
 uuid = "e88e6eb3-aa80-5325-afca-941959d7151f"
 url = "https://fluxml.ai/Zygote.jl/{version}/"
-icon = {file = "icons/Zygote.ico"}
+icon = {file = "icons/Zygote.png"}
 builds = []
 
 [IRTools]
