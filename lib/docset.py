@@ -28,35 +28,34 @@ class Docset:
 
     @property
     def plist(self) -> str:
-        return f'''
-            <?xml version="1.0" encoding="UTF-8"?>
-            <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-            <plist version="1.0">
-            <dict>
-            <key>CFBundleIdentifier</key>
-            <string>{self.bundle_id}</string>
-            <key>CFBundleName</key>
-            <string>{self.bundle_name}</string>
-            <key>DocSetPlatformFamily</key>
-            <string>{self.platform_family}</string>
-            <key>isDashDocset</key>
-            <true/>
-            {f"""<key>dashIndexFilePath</key>
-            <string>{self.index}</string>
-            """ if self.index is not None else ""}
-            {f"""<key>DashDocSetFallbackURL</key>
-            <string>{self.fallback_url}</string>""" if self.fallback_url is not None else ""}
-            {f"""<key>DashDocSetPlayURL</key>
-            <string>{self.playground}</key>""" if self.playground is not None else ""}
-            {"""<key>isJavaScriptEnabled</key>
-            <true/>""" if self.allow_js else ""}
-            {"""<key>DashDocSetDefaultFTSEnabled</key>
-            <true/>""" if self.fts else ""}
-            {"""<key>DashDocSetFTSNotSupported</key>
-            <true/>""" if self.fts_forbidden else ""}
-            </dict>
-            </plist>
-            '''
+        return f'''<?xml version="1.0" encoding="UTF-8"?>
+                <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+                <plist version="1.0">
+                <dict>
+                <key>CFBundleIdentifier</key>
+                <string>{self.bundle_id}</string>
+                <key>CFBundleName</key>
+                <string>{self.bundle_name}</string>
+                <key>DocSetPlatformFamily</key>
+                <string>{self.platform_family}</string>
+                <key>isDashDocset</key>
+                <true/>
+                {f"""<key>dashIndexFilePath</key>
+                <string>{self.index}</string>
+                """ if self.index is not None else ""}
+                {f"""<key>DashDocSetFallbackURL</key>
+                <string>{self.fallback_url}</string>""" if self.fallback_url is not None else ""}
+                {f"""<key>DashDocSetPlayURL</key>
+                <string>{self.playground}</key>""" if self.playground is not None else ""}
+                {"""<key>isJavaScriptEnabled</key>
+                <true/>""" if self.allow_js else ""}
+                {"""<key>DashDocSetDefaultFTSEnabled</key>
+                <true/>""" if self.fts else ""}
+                {"""<key>DashDocSetFTSNotSupported</key>
+                <true/>""" if self.fts_forbidden else ""}
+                </dict>
+                </plist>
+                '''
     
     @property
     def root(self):
