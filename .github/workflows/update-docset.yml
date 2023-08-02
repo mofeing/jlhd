@@ -28,7 +28,11 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
       - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }}
+      - name: Enclose DocSet into directory
+        run: |
+          mkdir artifact
+          mv *.docset artifact/
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.bundle_name }}.docset
-          path: ${{ matrix.bundle_name }}.docset
+          path: artifact
