@@ -20,6 +20,8 @@ bundle_name = args.bundle_name
 platform_family = args.platform_family
 url = args.url
 
+fallback_url = args.fallback_url if hasattr(args, 'fallback_url') else url
+
 docset = Docset(
     bundle_id,
     bundle_name,
@@ -28,7 +30,7 @@ docset = Docset(
     index="index.html",
     allow_js=args.allow_js,
     playground=args.playground,
-    fallback_url=args.fallback_url,
+    fallback_url=fallback_url,
 )
 
 docset.render()
