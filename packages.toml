@@ -12,6 +12,7 @@ bundle_name = "ChainRules.jl"
 platform_family = "chainrules"
 uuid = "082447d4-558c-5d27-93f4-14fc19e9eca2"
 url =  "https://juliadiff.org/ChainRulesCore.jl/stable/"
+allow_js = true
 builds = []
 
 [ExprParsers]
@@ -219,6 +220,7 @@ bundle_name = "BlockArrays.jl"
 platform_family = "blockarrays"
 uuid = "8e7c35d0-a365-5155-bbbb-fb81a777f24e"
 url = "https://juliaarrays.github.io/BlockArrays.jl/stable/"
+allow_js = true
 builds = []
 
 [PAPI]
@@ -237,6 +239,7 @@ platform_family = "tensorkit"
 uuid = "07d1fe3e-3e46-537d-9eac-e9e13d0d4cec"
 url = "https://jutho.github.io/TensorKit.jl/stable/"
 icon = {file = "icons/TensorKit.png"}
+allow_js = true
 builds = []
 
 [ResumableFunctions]
@@ -254,6 +257,7 @@ platform_family = "tensoroperations"
 uuid = "6aa20fa7-93e2-5fca-9bc0-fbd0db3c71a2"
 url = "https://jutho.github.io/TensorOperations.jl/stable/"
 icon = {file = "icons/TensorOperations.png"}
+allow_js = true
 builds = []
 
 [Dagger]
@@ -324,6 +328,7 @@ platform_family = "zygote"
 uuid = "e88e6eb3-aa80-5325-afca-941959d7151f"
 url = "https://fluxml.ai/Zygote.jl/{version}/"
 icon = {file = "icons/Zygote.png"}
+allow_js = true
 builds = []
 
 [IRTools]
@@ -341,6 +346,7 @@ bundle_name = "OMEinsum.jl"
 platform_family = "omeinsum"
 uuid = "ebe7aa44-baf0-506c-a96f-8464559b3922"
 url = "https://under-peter.github.io/OMEinsum.jl/{version}/"
+allow_js = true
 builds = []
 
 [Metal]
@@ -359,6 +365,7 @@ platform_family = "flux"
 uuid = "587475ba-b771-5e3f-ad9e-33799f191a9c"
 url = "https://fluxml.ai/Flux.jl/stable/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
+allow_js = true
 builds = []
 
 [DataFrames]
@@ -377,6 +384,7 @@ platform_family = "tenet"
 uuid = "85d41934-b9cd-44e1-8730-56d86f15f3ec"
 registry = "bsc-quantic/Registry"
 url = "https://bsc-quantic.github.io/Tenet.jl/stable/"
+allow_js = true
 builds = []
 
 [EinExprs]
@@ -386,4 +394,5 @@ platform_family = "einexprs"
 uuid = "b1794770-133b-4de1-afb4-526377e9f4c5"
 registry = "bsc-quantic/Registry"
 url = "https://bsc-quantic.github.io/EinExprs.jl/stable/"
+allow_js = true
 builds = []

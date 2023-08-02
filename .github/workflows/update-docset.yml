@@ -28,8 +28,16 @@ jobs:
         with:
           python-version: '3.11.4'
           cache: 'pip'
+      - id: preprocess-args
+        run: |
+          extra_args=""
+          if [ -n '${{ matrix.allow_js }}' ] && [ '${{ matrix.allow_js }}' == 'true' ]; then
+            extra_args="$extra_args --allow_js"
+          fi
+
+          echo "extra_args=$extra_args" >> $GITHUB_OUTPUT
       - run: pip install -r requirements.txt
-      - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }} --version=${{ matrix.version }}
+      - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }} --version=${{ matrix.version }} ${{ steps.preprocess-args.outputs.extra_args }}
       - id: conditional-icon
         run: |
           if [ -n '${{ matrix.icon.file }}' ]; then
