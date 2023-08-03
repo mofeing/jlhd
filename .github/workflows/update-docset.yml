@@ -100,9 +100,8 @@ jobs:
 
           cp ../../../${{ matrix.bundle_name }}.docset/icon* .
 
-          if [ ! -f "docsets/${{ matrix.bundle_name }}/docset.json" ]; then
-            cat <<EOF >docset.json
-            {
+          if [ ! -f "docset.json" ]; then
+            echo '{
                 "name": "${{ matrix.bundle_name }}",
                 "version": "${{ matrix.version }}",
                 "archive": "${{ matrix.bundle_name }}.tgz",
@@ -119,8 +118,7 @@ jobs:
                       "archive": "versions/${{ matrix.version }}/${{ matrix.bundle_name }}.tgz"
                     }
                 ]
-            }
-            EOF
+            }' >docset.json
           fi
       - run: |
           git commit -am "[Julia] ${{ matrix.bundle_name }} @ ${{ matrix.version }}"
