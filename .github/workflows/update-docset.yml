@@ -120,7 +120,7 @@ jobs:
                 ]
             }' >docset.json
           fi
-      - run: |
+
           cd ../../
           git commit -am "[Julia] ${{ matrix.bundle_name }} @ ${{ matrix.version }}"
           git push -u origin HEAD
