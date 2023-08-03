@@ -89,7 +89,7 @@ jobs:
           git checkout -b $branch origin/master
 
           mkdir -p docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
-          cp ${{ matrix.bundle_name }}.tgz docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
+          cp ../${{ matrix.bundle_name }}.tgz docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
           cd docsets/${{ matrix.bundle_name }}
 
           cat <<EOF >README.md
