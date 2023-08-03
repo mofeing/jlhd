@@ -129,5 +129,6 @@ jobs:
 
           # push to fork
           cd ../../
-          git commit -am "[Julia] ${{ matrix.bundle_name }} @ ${{ matrix.version }}"
+          git add --all
+          git commit -m "[Julia] ${{ matrix.bundle_name }} @ ${{ matrix.version }}"
           git push -u origin HEAD
