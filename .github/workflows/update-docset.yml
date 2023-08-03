@@ -80,13 +80,16 @@ jobs:
         with:
           name: ${{ matrix.bundle_name }}.docset
       - run: tar --exclude='.DS_Store' -cvzf ${{ matrix.bundle_name }}.tgz ${{ matrix.bundle_name }}.docset
-      - uses: snow-actions/git-config-user@v1.0.0
       - run: gh repo clone mofeing/Dash-User-Contributions
         env:
           GH_TOKEN: ${{ github.token }}
       - run: |
           branch="${{ matrix.bundle_id }}-${{ matrix.version }}-$(sha256sum ${{ matrix.bundle_name }}.tgz | head -c 10)"
           cd Dash-User-Contributions
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git checkout -b $branch origin/master
 
           mkdir -p docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
