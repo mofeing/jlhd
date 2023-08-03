@@ -79,20 +79,21 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: ${{ matrix.bundle_name }}.docset
-      - run: tar --exclude='.DS_Store' -cvzf ${{ matrix.bundle_name }}.tgz ${{ matrix.bundle_name }}.docset
-      - run: gh repo clone mofeing/Dash-User-Contributions
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - id: docset-tar
+        run: |
+          tar --exclude='.DS_Store' -cvzf ${{ matrix.bundle_name }}.tgz ${{ matrix.bundle_name }}.docset
+          echo "branch=${{ matrix.bundle_id }}-${{ matrix.version }}-$(sha256sum ${{ matrix.bundle_name }}.tgz | head -c 10)" > $GITHUB_OUTPUT
+      - uses: actions/checkout@v3
+        with:
+          repository: mofeing/Dash-User-Contributions
+          token: ${{ secrets.DASH_TOKEN }}
       - run: |
-          branch="${{ matrix.bundle_id }}-${{ matrix.version }}-$(sha256sum ${{ matrix.bundle_name }}.tgz | head -c 10)"
-          cd Dash-User-Contributions
-
           # log as 'github-actions[bot]'
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # git config user.name "github-actions[bot]"
+          # git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # commit docset to new branch
-          git checkout -b $branch origin/master
+          git checkout -b ${{ steps.docset-tar.outputs.branch }} origin/master
 
           mkdir -p docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
           cp ../${{ matrix.bundle_name }}.tgz docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
@@ -130,5 +131,5 @@ jobs:
           # push to fork
           cd ../../
           git add --all
-          git commit -m "[Julia] ${{ matrix.bundle_name }} @ ${{ matrix.version }}"
+          git commit -m "[Julia] ${{ matrix.bundle_name }} ${{ matrix.version }}"
           git push -u origin HEAD
