@@ -96,7 +96,7 @@ jobs:
           git checkout -b ${{ steps.docset-tar.outputs.branch }} origin/master
 
           mkdir -p docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
-          cp ../${{ matrix.bundle_name }}.tgz docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
+          cp $GITHUB_WORKSPACE/${{ matrix.bundle_name }}.tgz docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
           cd docsets/${{ matrix.bundle_name }}
 
           echo "# ${{ matrix.bundle_name }}"                                                                  >README.md
@@ -105,7 +105,7 @@ jobs:
           echo                                                                                                >>README.md
           echo "Contact @mofeing for any inquiries."                                                          >>README.md
 
-          cp ../../../${{ matrix.bundle_name }}.docset/icon* .
+          cp $GITHUB_WORKSPACE/${{ matrix.bundle_name }}.docset/icon* .
 
           if [ ! -f "docset.json" ]; then
             echo '{
