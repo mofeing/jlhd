@@ -87,9 +87,11 @@ jobs:
           branch="${{ matrix.bundle_id }}-${{ matrix.version }}-$(sha256sum ${{ matrix.bundle_name }}.tgz | head -c 10)"
           cd Dash-User-Contributions
 
+          # log as 'github-actions[bot]'
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          # commit docset to new branch
           git checkout -b $branch origin/master
 
           mkdir -p docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
@@ -125,6 +127,7 @@ jobs:
             }' >docset.json
           fi
 
+          # push to fork
           cd ../../
           git commit -am "[Julia] ${{ matrix.bundle_name }} @ ${{ matrix.version }}"
           git push -u origin HEAD
