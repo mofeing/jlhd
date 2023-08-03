@@ -99,7 +99,7 @@ jobs:
           
           Contact @mofeing for any inquiries.
           EOF
-          cp ../../${{ matrix.bundle_name }}.docset/icon* .
+          cp ../../../${{ matrix.bundle_name }}.docset/icon* .
 
           if [ ! -f "docsets/${{ matrix.bundle_name }}/docset.json" ]; then
             cat <<EOF >docset.json
