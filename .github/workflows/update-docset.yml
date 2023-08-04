@@ -155,7 +155,7 @@ jobs:
           Original URL: ${{ matrix.url }}
           "
 
-          gh pr create --base Kapeli:master --head mofeing:$branch --body "$body" --fill
+          gh pr create --repo Kapeli/Dash-User-Contributions --head mofeing:$branch --body "$body" --fill
         env:
           GH_TOKEN: ${{ secrets.DASH_TOKEN }}
   mark-version:
