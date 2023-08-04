@@ -41,13 +41,13 @@ uuid = "190e46ec-f771-4705-b939-984896f7be0e"
 url = "https://tk3369.github.io/BinaryTraits.jl/stable/"
 builds = []
 
-[DynamicExpressions]
-bundle_id = "dynamicexpressions"
-bundle_name = "DynamicExpressions.jl"
-platform_family = "dynamicexpressions"
-uuid = "a40a106e-89c9-4ca8-8020-a735e8728b6b"
-url = "https://symbolicml.org/DynamicExpressions.jl/stable/"
-builds = []
+# [DynamicExpressions]
+# bundle_id = "dynamicexpressions"
+# bundle_name = "DynamicExpressions.jl"
+# platform_family = "dynamicexpressions"
+# uuid = "a40a106e-89c9-4ca8-8020-a735e8728b6b"
+# url = "https://symbolicml.org/DynamicExpressions.jl/stable/"
+# builds = []
 
 [JuliaSyntax]
 bundle_id = "juliasyntax"
@@ -58,13 +58,13 @@ url = "https://julialang.github.io/JuliaSyntax.jl/dev/"
 icon = {file = "icons/Julia.png"}
 builds = []
 
-[Julog]
-bundle_id = "julog"
-bundle_name = "Julog.jl"
-platform_family = "julog"
-uuid = "5d8bcb5e-2b2c-4a96-a2b1-d40b3d3c344f"
-url = "https://docs.juliahub.com/Julog/TpEtX/0.1.15/"
-builds = []
+# [Julog]
+# bundle_id = "julog"
+# bundle_name = "Julog.jl"
+# platform_family = "julog"
+# uuid = "5d8bcb5e-2b2c-4a96-a2b1-d40b3d3c344f"
+# url = "https://docs.juliahub.com/Julog/TpEtX/0.1.15/"
+# builds = []
 
 [PrecompileTools]
 bundle_id = "precompiletools"
@@ -109,14 +109,14 @@ url = "https://octavian.julialinearalgebra.org/stable/"
 icon = {file = "icons/JuliaLinearAlgebra.png"}
 builds = []
 
-[MLStyle]
-bundle_id = "mlstyle"
-bundle_name = "MLStyle.jl"
-platform_family = "mlstyle"
-uuid = "d8e11817-5142-5d16-987a-aa16d5891078"
-url = "https://thautwarm.github.io/MLStyle.jl/latest/"
-icon = {url = "https://thautwarm.github.io/MLStyle.jl/latest/_static/favicon.ico"}
-builds = []
+# [MLStyle]
+# bundle_id = "mlstyle"
+# bundle_name = "MLStyle.jl"
+# platform_family = "mlstyle"
+# uuid = "d8e11817-5142-5d16-987a-aa16d5891078"
+# url = "https://thautwarm.github.io/MLStyle.jl/latest/"
+# icon = {url = "https://thautwarm.github.io/MLStyle.jl/latest/_static/favicon.ico"}
+# builds = []
 
 [LoweredCodeUtils]
 bundle_id = "loweredcodeutils"
@@ -151,13 +151,13 @@ url = "https://juliafolds.github.io/Transducers.jl/stable/"
 icon = {file = "icons/Transducers.png"}
 builds = []
 
-[Automa]
-bundle_id = "automa"
-bundle_name = "Automa.jl"
-platform_family = "automa"
-uuid = "67c07d97-cdcb-5c2c-af73-a7f9c32a568b"
-url = "https://biojulia.dev/Automa.jl/stable"
-builds = []
+# [Automa]
+# bundle_id = "automa"
+# bundle_name = "Automa.jl"
+# platform_family = "automa"
+# uuid = "67c07d97-cdcb-5c2c-af73-a7f9c32a568b"
+# url = "https://biojulia.dev/Automa.jl/stable"
+# builds = []
 
 [KernelAbstractions]
 bundle_id = "kernelabstractions"
@@ -202,14 +202,14 @@ url = "https://juliasimd.github.io/LoopVectorization.jl/stable/"
 icon = {file = "icons/LoopVectorization.png"}
 builds = []
 
-[ArrayInterface]
-bundle_id = "arrayinterface"
-bundle_name = "ArrayInterface.jl"
-platform_family = "arrayinterface"
-uuid = "4fba245c-0d91-5ea0-9b3e-6abc04ee57a9"
-url = "https://docs.sciml.ai/ArrayInterface/stable/"
-icon = {file = "icons/SciML.png"}
-builds = []
+# [ArrayInterface]
+# bundle_id = "arrayinterface"
+# bundle_name = "ArrayInterface.jl"
+# platform_family = "arrayinterface"
+# uuid = "4fba245c-0d91-5ea0-9b3e-6abc04ee57a9"
+# url = "https://docs.sciml.ai/ArrayInterface/stable/"
+# icon = {file = "icons/SciML.png"}
+# builds = []
 
 [Cassette]
 bundle_id = "cassette"
