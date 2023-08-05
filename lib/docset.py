@@ -29,34 +29,33 @@ class Docset:
 
     @property
     def plist(self) -> str:
-        return f'''<?xml version="1.0" encoding="UTF-8"?>
-                <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-                <plist version="1.0">
-                <dict>
-                <key>CFBundleIdentifier</key>
-                <string>{self.bundle_id}</string>
-                <key>CFBundleName</key>
-                <string>{self.bundle_name}</string>
-                <key>DocSetPlatformFamily</key>
-                <string>{self.platform_family}</string>
-                <key>isDashDocset</key>
-                <true/>
-                {f"""<key>dashIndexFilePath</key>
-                <string>{self.index}</string>
-                """ if self.index is not None else ""}
-                {f"""<key>DashDocSetFallbackURL</key>
-                <string>{self.fallback_url}</string>""" if self.fallback_url is not None else ""}
-                {f"""<key>DashDocSetPlayURL</key>
-                <string>{self.playground}</key>""" if self.playground is not None else ""}
-                {"""<key>isJavaScriptEnabled</key>
-                <true/>""" if self.allow_js else ""}
-                {"""<key>DashDocSetDefaultFTSEnabled</key>
-                <true/>""" if self.fts else ""}
-                {"""<key>DashDocSetFTSNotSupported</key>
-                <true/>""" if self.fts_forbidden else ""}
-                </dict>
-                </plist>
-                '''
+        dash_index_file_path = f"<key>dashIndexFilePath</key>\n<string>{self.index}</string>\n" if self.index is not None else ""
+        dash_docset_fallback_url = f"<key>DashDocSetFallbackURL</key>\n<string>{self.fallback_url}</string>\n" if self.fallback_url is not None else ""
+        dash_docset_play_url = f"<key>DashDocSetPlayURL</key>\n<string>{self.playground}</key>\n" if self.playground is not None else ""
+        is_javascript_enabled = "<key>isJavaScriptEnabled</key>\n<true/>\n" if self.allow_js else ""
+        dash_docset_default_fts_enabled = "<key>DashDocSetDefaultFTSEnabled</key>\n<true/>\n" if self.fts else ""
+        dash_docset_fts_not_supported = "<key>DashDocSetFTSNotSupported</key>\n<true/>\n" if self.fts_forbidden else ""
+        return '<?xml version="1.0" encoding="UTF-8"?>\n' \
+                '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n' \
+                '<plist version="1.0">\n' \
+                '<dict>\n' \
+                '<key>CFBundleIdentifier</key>\n' \
+                f'<string>{self.bundle_id}</string>\n' \
+                '<key>CFBundleName</key>\n' \
+                f'<string>{self.bundle_name}</string>\n' \
+                '<key>DocSetPlatformFamily</key>\n' \
+                f'<string>{self.platform_family}</string>\n' \
+                '<key>isDashDocset</key>\n' \
+                '<true/>\n' \
+                f"{dash_index_file_path}" \
+                f"{dash_docset_fallback_url}" \
+                f"{dash_docset_play_url}" \
+                f"{is_javascript_enabled}" \
+                f"{dash_docset_default_fts_enabled}" \
+                f"{dash_docset_fts_not_supported}" \
+                "</dict>\n" \
+                "</plist>\n"
+                
 
     @property
     def root(self):
