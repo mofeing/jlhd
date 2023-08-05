@@ -113,6 +113,10 @@ class Docset:
                         )
                         folder, file = os.path.split(path)
 
+                        # skip processing if just fragment links
+                        if not folder and not file and fragment:
+                            continue
+
                         if not file:
                             file = "index.html"
                             tag["href"] = urlunparse(
