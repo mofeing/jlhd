@@ -21,7 +21,7 @@ bundle_name = args.bundle_name
 platform_family = args.platform_family
 url = args.url.format(version="v" + args.version)
 
-fallback_url = args.fallback_url if hasattr(args, 'fallback_url') else url
+fallback_url = args.fallback_url if hasattr(args, "fallback_url") else url
 
 docset = Docset(
     bundle_id,

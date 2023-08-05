@@ -9,4 +9,4 @@ args = parser.parse_args()
 with open("packages.toml", "r") as fh:
     pkgs = toml.load(fh)
 
-pkgs[args.package]['builds'].append(args.version)
+pkgs[args.package]["builds"].append(args.version)
