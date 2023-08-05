@@ -15,6 +15,7 @@ jobs:
     - run: pip install -r requirements.txt
     - id: setup-matrix
       run: python check-package-versions.py -o $GITHUB_OUTPUT
+
   generate-docset:
     needs: query-registry
     runs-on: ubuntu-latest
@@ -26,20 +27,24 @@ jobs:
       - uses: actions/checkout@v3
         with:
           lfs: true
+
       - uses: actions/setup-python@v4
         with:
           python-version: '3.11.4'
           cache: 'pip'
+
       - id: preprocess-args
         run: |
           extra_args=""
           if [ -n '${{ matrix.allow_js }}' ] && [ '${{ matrix.allow_js }}' == 'true' ]; then
             extra_args="$extra_args --allow_js"
           fi
-
           echo "extra_args=$extra_args" >> $GITHUB_OUTPUT
+
       - run: pip install -r requirements.txt
+
       - run: python generate-docset.py ${{ matrix.bundle_id }} ${{ matrix.bundle_name }} ${{ matrix.platform_family }} ${{ matrix.url }} --version=${{ matrix.version }} ${{ steps.preprocess-args.outputs.extra_args }}
+
       - id: conditional-icon
         run: |
           if [ -n '${{ matrix.icon.file }}' ]; then
@@ -54,22 +59,27 @@ jobs:
           if [ -n $icon ]; then
             echo "icon=$icon" >> $GITHUB_OUTPUT
           fi
+
       - uses: FedericoCarboni/setup-ffmpeg@v2
         if: ${{ steps.conditional-icon.outputs.icon }}
+
       - run: |
           ffmpeg -i $icon -vf "scale=16:-1:flags=lanczos,format=rgba,pad=16:16:(ow-iw)/2:(oh-ih)/2:color=#00000000" ${{ matrix.bundle_name }}.docset/icon.png
           ffmpeg -i $icon -vf "scale=32:-1:flags=lanczos,format=rgba,pad=32:32:(ow-iw)/2:(oh-ih)/2:color=#00000000" ${{ matrix.bundle_name }}.docset/icon@2x.png
         if: ${{ steps.conditional-icon.outputs.icon }}
         env:
           icon: ${{ steps.conditional-icon.outputs.icon }}
+
       - name: Enclose DocSet into directory
         run: |
           mkdir artifact
           mv *.docset artifact/
+
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.bundle_name }}.docset
           path: artifact
+
   open-pr-in-dash-contrib:
     needs: generate-docset
     runs-on: ubuntu-latest
