@@ -1,8 +1,9 @@
 import scrapy
 from urllib.parse import urljoin, urlparse
-from os.path import relpath, splitext
+from os.path import relpath, splitext, join
 from pathlib import Path
 from scrapy.linkextractors import LinkExtractor
+import re
 
 
 class DocumenterSpider(scrapy.Spider):
@@ -10,7 +11,7 @@ class DocumenterSpider(scrapy.Spider):
     start_urls = []
     target_path = ""
 
-    def parse(self, response, **kwargs):
+    def parse(self, response, external: bool = False, **kwargs):
         filename = urlparse(response.url).path.removeprefix("/")
 
         # if html but url is a folder, suffix "index.html"
@@ -21,6 +22,11 @@ class DocumenterSpider(scrapy.Spider):
 
         url_root = urlparse(self.start_urls[0]).path.removeprefix("/")
         filename = relpath(filename, url_root)
+
+        # do not go up to upper directories
+        filename = re.sub("\.\.\/", "", filename)
+        if external:
+            filename = join("__dash_external", filename)
 
         filename: Path = self.target_path.joinpath(filename)
 
@@ -39,36 +45,29 @@ class DocumenterSpider(scrapy.Spider):
         # fetch images
         # TODO replace url for local version in html
         for src in response.css("img::attr(src)"):
-            src = src.get()
-            url = urljoin(self.start_urls[0], src)
-            yield scrapy.Request(url)
+            yield response.follow(src.get(), callback=None)
 
         # fetch scripts
         # TODO replace url for local version in html
         for src in response.css("script::attr(src)"):
             src = src.get()
 
-            # skip vendored scripts
-            # TODO make local copy of vendored scripts
+            # make local copy of vendored scripts
             # TODO manage 'versions.js'
-            if urlparse(src).scheme != "":
-                continue
+            isexternal = urlparse(src).scheme != ""
 
-            url = urljoin(self.start_urls[0], src)
-            yield scrapy.Request(url)
+            # url = urljoin(self.start_urls[0], src)
+            yield response.follow(src, callback=None, cb_kwargs = dict(external = isexternal))
 
         # fetch css
         # TODO replace url for local version in html
         for href in response.css("link::attr(href)"):
             href = href.get()
 
-            # skip vendored styles
-            # TODO make local copy of vendored styles
-            if urlparse(href).scheme != "":
-                continue
+            # make local copy of vendored styles
+            isexternal = urlparse(href).scheme != ""
 
-            url = urljoin(self.start_urls[0], href)
-            yield scrapy.Request(url)
+            yield response.follow(href, callback=None, cb_kwargs = dict(external = isexternal))
 
         # fetch html
         link_extractor = LinkExtractor(
@@ -84,4 +83,4 @@ class DocumenterSpider(scrapy.Spider):
             if urlparse(link.url).fragment != "":
                 continue
 
-            yield scrapy.Request(link.url)
+            yield response.follow(link.url, callback=self.parse)
