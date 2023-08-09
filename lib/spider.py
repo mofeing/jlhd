@@ -1,6 +1,7 @@
 import scrapy
 from urllib.parse import urljoin, urlparse, urlunparse
-from os.path import relpath, splitext, join
+import os.path
+from os.path import relpath, splitext
 from pathlib import Path
 from scrapy.linkextractors import LinkExtractor
 import re
@@ -27,7 +28,7 @@ class DocumenterSpider(scrapy.Spider):
         # do not go up to upper directories
         filename = re.sub("\.\.\/", "", filename)
         if external:
-            filename = join("__dash_external", filename)
+            filename = os.path.join("__dash_external", filename.lstrip('/'))
 
         filename: Path = self.target_path.joinpath(filename)
 
@@ -40,6 +41,7 @@ class DocumenterSpider(scrapy.Spider):
 
         # if css, js or image, fetch and exit
         if ext != ".html":
+            print(f"[ARTIFACT] {filename}")
             with open(filename, "wb") as file:
                 file.write(response.body)
             return
@@ -48,15 +50,17 @@ class DocumenterSpider(scrapy.Spider):
         soup = BeautifulSoup(response.body, features='lxml')
 
         # fetch images
-        # TODO replace url for local version in html
         for src in response.css("img::attr(src)"):
+            # skip external images
+            if urlparse(src.get()).scheme == "https":
+                continue
             yield response.follow(src.get(), callback=None)
 
         for tag in soup.select("img[src]"):
-            tag['src'] = join("__dash_external", urlparse(tag['src']).path)
+            if urlparse(tag['src']).scheme == "https":
+                continue
 
         # fetch scripts
-        # TODO replace url for local version in html
         for src in response.css("script::attr(src)"):
             src = src.get()
 
@@ -68,11 +72,14 @@ class DocumenterSpider(scrapy.Spider):
             yield response.follow(src, callback=None, cb_kwargs = dict(external = isexternal))
 
         for tag in soup.select("script[src]"):
-            if urlparse(tag['src']).scheme != "":
-                tag['src'] = join("__dash_external", urlparse(tag['src']).path)
+            print(f"\033[0;31m[SCRIPT DETECTED]\n\told: {tag['src']}\033[0;00m")
+
+            if urlparse(tag['src']).scheme == "https":
+                tag['src'] = os.path.join("__dash_external", urlparse(tag['src']).path.lstrip('/'))
+
+            print(f"\033[0;33m\tnew: {tag['src']}\033[0;00m")
 
         # fetch css
-        # TODO replace url for local version in html
         for href in response.css("link::attr(href)"):
             href = href.get()
 
@@ -82,8 +89,13 @@ class DocumenterSpider(scrapy.Spider):
             yield response.follow(href, callback=None, cb_kwargs = dict(external = isexternal))
 
         for tag in soup.select("link[href]"):
-            if urlparse(tag['href']).scheme != "":
-                tag['href'] = join("__dash_external", urlparse(tag['href']).path)
+            print(f"\033[0;31m[LINK DETECTED]\n\told: {tag['href']}\033[0;00m")
+
+            if urlparse(tag['href']).scheme == "https":
+                tag['href'] = os.path.join("__dash_external", urlparse(tag['href']).path.lstrip('/'))
+
+            print(f"\033[0;33m\tnew: {tag['href']}\033[0;00m")
+            
 
         # fetch html
         link_extractor = LinkExtractor(
@@ -102,8 +114,13 @@ class DocumenterSpider(scrapy.Spider):
             yield response.follow(link.url, callback=self.parse)
 
         for tag in soup.select("a[href]"):
-            _, _, path, _, _, fragment = urlparse(tag['href'])
-            tag['href'] = urlunparse(('', '', path, '', '', fragment))
+            _, _, path, params, query, fragment = urlparse(tag['href'])
+
+            _, ext = splitext(path)
+            if ext != ".html":
+                path = os.path.join(path, "index.html")
+
+            tag['href'] = urlunparse(('', '', path, params, query, fragment))
 
         with open(filename, "wb") as file:
             file.write(soup.prettify('utf8'))
