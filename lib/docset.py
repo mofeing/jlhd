@@ -101,34 +101,9 @@ class Docset:
 
             for filename in filenames:
                 with open(
-                    Path(root) / filename, "r+", encoding="utf8", errors="ignore"
+                    Path(root) / filename, "r", encoding="utf8", errors="ignore"
                 ) as fh:
                     soup = BeautifulSoup(fh, features="lxml")
-
-                    # fix links
-                    # NOTE if deployed with folder organization, "index.html" is not appended to links
-                    for tag in soup.find_all("a", href=True):
-                        scheme, netloc, path, params, query, fragment = urlparse(
-                            tag["href"]
-                        )
-                        folder, file = os.path.split(path)
-
-                        # skip processing if just fragment links
-                        if not folder and not file and fragment:
-                            continue
-
-                        if not file:
-                            file = "index.html"
-                            tag["href"] = urlunparse(
-                                (
-                                    scheme,
-                                    netloc,
-                                    os.path.join(folder, file),
-                                    params,
-                                    query,
-                                    fragment,
-                                )
-                            )
 
                     print(f"{os.path.join(root,filename)}:")
 
@@ -159,5 +134,4 @@ class Docset:
                             f"INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('{name}', '{type}', '{path}')"
                         )
 
-                    fh.write(str(soup))
                     con.commit()

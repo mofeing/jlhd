@@ -1,9 +1,10 @@
 import scrapy
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, urlunparse
 from os.path import relpath, splitext, join
 from pathlib import Path
 from scrapy.linkextractors import LinkExtractor
 import re
+from bs4 import BeautifulSoup
 
 
 class DocumenterSpider(scrapy.Spider):
@@ -34,18 +35,25 @@ class DocumenterSpider(scrapy.Spider):
         # TODO skip on parsing
         if filename.exists():
             return
-
+        
         filename.parent.mkdir(parents=True, exist_ok=True)
-        with open(filename, "wb") as file:
-            file.write(response.body)
 
+        # if css, js or image, fetch and exit
         if ext != ".html":
+            with open(filename, "wb") as file:
+                file.write(response.body)
             return
+
+        # if html, fetch, parse links and relink to local files
+        soup = BeautifulSoup(response.body, features='lxml')
 
         # fetch images
         # TODO replace url for local version in html
         for src in response.css("img::attr(src)"):
             yield response.follow(src.get(), callback=None)
+
+        for tag in soup.select("img[src]"):
+            tag['src'] = join("__dash_external", urlparse(tag['src']).path)
 
         # fetch scripts
         # TODO replace url for local version in html
@@ -59,6 +67,10 @@ class DocumenterSpider(scrapy.Spider):
             # url = urljoin(self.start_urls[0], src)
             yield response.follow(src, callback=None, cb_kwargs = dict(external = isexternal))
 
+        for tag in soup.select("script[src]"):
+            if urlparse(tag['src']).scheme != "":
+                tag['src'] = join("__dash_external", urlparse(tag['src']).path)
+
         # fetch css
         # TODO replace url for local version in html
         for href in response.css("link::attr(href)"):
@@ -68,6 +80,10 @@ class DocumenterSpider(scrapy.Spider):
             isexternal = urlparse(href).scheme != ""
 
             yield response.follow(href, callback=None, cb_kwargs = dict(external = isexternal))
+
+        for tag in soup.select("link[href]"):
+            if urlparse(tag['href']).scheme != "":
+                tag['href'] = join("__dash_external", urlparse(tag['href']).path)
 
         # fetch html
         link_extractor = LinkExtractor(
@@ -84,3 +100,10 @@ class DocumenterSpider(scrapy.Spider):
                 continue
 
             yield response.follow(link.url, callback=self.parse)
+
+        for tag in soup.select("a[href]"):
+            _, _, path, _, _, fragment = urlparse(tag['href'])
+            tag['href'] = urlunparse(('', '', path, '', '', fragment))
+
+        with open(filename, "wb") as file:
+            file.write(soup.prettify('utf8'))
