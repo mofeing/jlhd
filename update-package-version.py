@@ -10,3 +10,6 @@ with open("packages.toml", "r") as fh:
     pkgs = toml.load(fh)
 
 pkgs[args.package]["builds"].append(args.version)
+
+with open("packages.toml", "w") as fh:
+    toml.dump(pkgs, fh)
