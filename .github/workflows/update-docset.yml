@@ -95,7 +95,7 @@ jobs:
       - id: branch
         run: |
           tar --exclude='.DS_Store' -cvzf ${{ matrix.bundle_name }}.tgz ${{ matrix.bundle_name }}.docset
-          branch="${{ matrix.bundle_id }}-${{ matrix.version }}-$(sha256sum ${{ matrix.bundle_name }}.tgz | head -c 10)"
+          branch="${{ matrix.bundle_id }}-${{ matrix.version }}-$(echo "${{ matrix.bundle_id }}-${{ matrix.version }}" | sha256sum | head -c 10)"
           echo "name=$branch" >$GITHUB_OUTPUT
 
       - uses: actions/checkout@v3
