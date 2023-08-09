@@ -126,7 +126,7 @@ jobs:
                 "archive": "${{ matrix.bundle_name }}.tgz",
                 "author": {
                     "name": "Sergio Sánchez Ramírez",
-                    "author": "https://github.com/mofeing"
+                    "link": "https://github.com/mofeing"
                 },
                 "aliases": [
                     "julia"
