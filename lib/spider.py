@@ -114,11 +114,21 @@ class DocumenterSpider(scrapy.Spider):
             yield response.follow(link.url, callback=self.parse)
 
         for tag in soup.select("a[href]"):
-            _, _, path, params, query, fragment = urlparse(tag['href'])
+            scheme, netloc, path, params, query, fragment = urlparse(tag['href'])
+
+            if scheme == "" and netloc == "" and path == "" and query == "":
+                print(f"[DEBUG] local link = {tag['href']}")
+                continue
+
+            if netloc != "" and netloc != urlparse(self.start_urls[0]).netloc:
+                print(f"[DISCARDED] {tag['href']}")
+                continue
+
 
             _, ext = splitext(path)
-            if ext != ".html":
+            if len(path) != 0 and ext != ".html":
                 path = os.path.join(path, "index.html")
+                print(f"\033[0;32m[DEBUG] path={path} \033[0;00m")
 
             tag['href'] = urlunparse(('', '', path, params, query, fragment))
 
