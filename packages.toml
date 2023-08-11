@@ -98,6 +98,7 @@ bundle_name = "JSServe.jl"
 platform_family = "jsserve"
 uuid = "824d6782-a2ef-11e9-3a09-e5662e0c26f9"
 url = "https://simondanisch.github.io/JSServe.jl/stable/"
+allow_js = true
 builds = []
 
 [Octavian]
