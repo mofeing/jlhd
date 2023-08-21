@@ -5,7 +5,6 @@ platform_family = "pkg"
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 url = "https://pkgdocs.julialang.org/v1/"
 icon = {file = "icons/Pkg.png"}
-builds = []
 
 [ChainRules]
 bundle_id = "chainrules"
@@ -15,7 +14,6 @@ uuid = "082447d4-558c-5d27-93f4-14fc19e9eca2"
 url =  "https://juliadiff.org/ChainRulesCore.jl/stable/"
 icon = {file = "icons/ChainRules.png"}
 allow_js = true
-builds = []
 
 [ExprParsers]
 bundle_id = "exprparsers"
@@ -23,7 +21,6 @@ bundle_name = "ExprParsers.jl"
 platform_family = "exprparsers"
 uuid = "c5caad1f-83bd-4ce8-ac8e-4b29921e994e"
 url = "https://jolin-io.github.io/ExprParsers.jl/stable/"
-builds = []
 
 [Match]
 bundle_id = "match"
@@ -31,7 +28,6 @@ bundle_name = "Match.jl"
 platform_family = "match"
 uuid = "7eb4fadd-790c-5f42-8a69-bfa0b872bfbf"
 url = "https://juliaservices.github.io/Match.jl/dev/"
-builds = []
 
 [BinaryTraits]
 bundle_id = "binarytraits"
@@ -39,7 +35,6 @@ bundle_name = "BinaryTraits.jl"
 platform_family = "binarytraits"
 uuid = "190e46ec-f771-4705-b939-984896f7be0e"
 url = "https://tk3369.github.io/BinaryTraits.jl/stable/"
-builds = []
 
 # [DynamicExpressions]
 # bundle_id = "dynamicexpressions"
@@ -47,7 +42,6 @@ builds = []
 # platform_family = "dynamicexpressions"
 # uuid = "a40a106e-89c9-4ca8-8020-a735e8728b6b"
 # url = "https://symbolicml.org/DynamicExpressions.jl/stable/"
-# builds = []
 
 [JuliaSyntax]
 bundle_id = "juliasyntax"
@@ -56,7 +50,6 @@ platform_family = "juliasyntax"
 uuid = "70703baa-626e-46a2-a12c-08ffd08c73b4"
 url = "https://julialang.github.io/JuliaSyntax.jl/dev/"
 icon = {file = "icons/Julia.png"}
-builds = []
 
 # [Julog]
 # bundle_id = "julog"
@@ -64,7 +57,6 @@ builds = []
 # platform_family = "julog"
 # uuid = "5d8bcb5e-2b2c-4a96-a2b1-d40b3d3c344f"
 # url = "https://docs.juliahub.com/Julog/TpEtX/0.1.15/"
-# builds = []
 
 [PrecompileTools]
 bundle_id = "precompiletools"
@@ -73,7 +65,6 @@ platform_family = "precompiletools"
 uuid = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
 url = "https://julialang.github.io/PrecompileTools.jl/stable/"
 icon = {file = "icons/Julia.png"}
-builds = []
 
 [Comonicon]
 bundle_id = "comonicon"
@@ -81,7 +72,6 @@ bundle_name = "Comonicon.jl"
 platform_family = "comonicon"
 uuid = "863f3e99-da2a-4334-8734-de3dacbe5542"
 url = "https://comonicon.org/stable/"
-builds = []
 
 [Folds]
 bundle_id = "folds"
@@ -90,7 +80,6 @@ platform_family = "folds"
 uuid = "41a02a25-b8f0-4f67-bc48-60067656b558"
 url = "https://juliafolds.github.io/Folds.jl/stable/"
 icon = {file = "icons/Transducers.png"}
-builds = []
 
 [JSServe]
 bundle_id = "jsserve"
@@ -99,7 +88,6 @@ platform_family = "jsserve"
 uuid = "824d6782-a2ef-11e9-3a09-e5662e0c26f9"
 url = "https://simondanisch.github.io/JSServe.jl/stable/"
 allow_js = true
-builds = []
 
 [Octavian]
 bundle_id = "octavian"
@@ -108,7 +96,6 @@ platform_family = "octavian"
 uuid = "6fd5a793-0b7e-452c-907f-f8bfe9c57db4"
 url = "https://octavian.julialinearalgebra.org/stable/"
 icon = {file = "icons/JuliaLinearAlgebra.png"}
-builds = []
 
 # [MLStyle]
 # bundle_id = "mlstyle"
@@ -117,7 +104,6 @@ builds = []
 # uuid = "d8e11817-5142-5d16-987a-aa16d5891078"
 # url = "https://thautwarm.github.io/MLStyle.jl/latest/"
 # icon = {url = "https://thautwarm.github.io/MLStyle.jl/latest/_static/favicon.ico"}
-# builds = []
 
 [LoweredCodeUtils]
 bundle_id = "loweredcodeutils"
@@ -125,7 +111,6 @@ bundle_name = "LoweredCodeUtils.jl"
 platform_family = "loweredcodeutils"
 uuid = "6f1432cf-f94c-5a45-995e-cdbf5db27b0b"
 url = "https://juliadebug.github.io/LoweredCodeUtils.jl/stable/"
-builds = []
 
 [Rocket]
 bundle_id = "rocket"
@@ -133,7 +118,6 @@ bundle_name = "Rocket.jl"
 platform_family = "rocket"
 uuid = "df971d30-c9d6-4b37-b8ff-e965b2cb3a40"
 url = "https://biaslab.github.io/Rocket.jl/stable/"
-builds = []
 
 [PikaParser]
 bundle_id = "pikaparser"
@@ -141,7 +125,6 @@ bundle_name = "PikaParser.jl"
 platform_family = "pikaparser"
 uuid = "3bbf5609-3e7b-44cd-8549-7c69f321e792"
 url = "https://lcsb-biocore.github.io/PikaParser.jl/stable/"
-builds = []
 
 [Transducers]
 bundle_id = "transducers"
@@ -150,7 +133,6 @@ platform_family = "transducers"
 uuid = "28d57a85-8fef-5791-bfe6-a80928e7c999"
 url = "https://juliafolds.github.io/Transducers.jl/stable/"
 icon = {file = "icons/Transducers.png"}
-builds = []
 
 # [Automa]
 # bundle_id = "automa"
@@ -158,7 +140,6 @@ builds = []
 # platform_family = "automa"
 # uuid = "67c07d97-cdcb-5c2c-af73-a7f9c32a568b"
 # url = "https://biojulia.dev/Automa.jl/stable"
-# builds = []
 
 [KernelAbstractions]
 bundle_id = "kernelabstractions"
@@ -167,7 +148,6 @@ platform_family = "kernelabstractions"
 uuid = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
 url = "https://juliagpu.github.io/KernelAbstractions.jl/stable/"
 icon = {file = "icons/JuliaGPU.png"}
-builds = []
 
 [Finch]
 bundle_id = "finch"
@@ -176,7 +156,6 @@ platform_family = "finch"
 uuid = "9177782c-1635-4eb9-9bfb-d9dfa25e6bce"
 url = "http://willowahrens.io/Finch.jl/stable/"
 icon = {url = "http://willowahrens.io/Finch.jl/stable/assets/favicon.ico"}
-builds = []
 
 [ExprTools]
 bundle_id = "exprtools"
@@ -184,7 +163,6 @@ bundle_name = "ExprTools.jl"
 platform_family = "exprtools"
 uuid = "e2ba6199-217a-4e67-a87a-7c52f15ade04"
 url = "https://invenia.github.io/ExprTools.jl/stable/"
-builds = []
 
 [Polyester]
 bundle_id = "polyester"
@@ -192,7 +170,6 @@ bundle_name = "Polyester.jl"
 platform_family = "polyester"
 uuid = "f517fe37-dbe3-4b94-8317-1923a5111588"
 url = "https://juliasimd.github.io/Polyester.jl/stable/"
-builds = []
 
 [LoopVectorization]
 bundle_id = "loopvectorization"
@@ -201,7 +178,6 @@ platform_family = "loopvectorization"
 uuid = "bdcacae8-1622-11e9-2a5c-532679323890"
 url = "https://juliasimd.github.io/LoopVectorization.jl/stable/"
 icon = {file = "icons/LoopVectorization.png"}
-builds = []
 
 # [ArrayInterface]
 # bundle_id = "arrayinterface"
@@ -210,7 +186,6 @@ builds = []
 # uuid = "4fba245c-0d91-5ea0-9b3e-6abc04ee57a9"
 # url = "https://docs.sciml.ai/ArrayInterface/stable/"
 # icon = {file = "icons/SciML.png"}
-# builds = []
 
 [Cassette]
 bundle_id = "cassette"
@@ -219,7 +194,6 @@ platform_family = "cassette"
 uuid = "7057c7e9-c182-5462-911a-8362d720325c"
 url = "https://julia.mit.edu/Cassette.jl/stable/"
 icon = {file = "icons/Cassette.png"}
-builds = []
 
 [BlockArrays]
 bundle_id = "blockarrays"
@@ -229,7 +203,6 @@ uuid = "8e7c35d0-a365-5155-bbbb-fb81a777f24e"
 url = "https://juliaarrays.github.io/BlockArrays.jl/stable/"
 icon = {file = "icons/JuliaArrays.png"}
 allow_js = true
-builds = []
 
 [PAPI]
 bundle_id = "papi"
@@ -238,7 +211,6 @@ platform_family = "papi"
 uuid = "c3f66453-0ce3-4e3d-8601-c404262f204f"
 url = "https://juliaperf.github.io/PAPI.jl/stable/"
 icon = {file = "icons/JuliaPerf.png"}
-builds = []
 
 [TensorKit]
 bundle_id = "tensorkit"
@@ -248,7 +220,6 @@ uuid = "07d1fe3e-3e46-537d-9eac-e9e13d0d4cec"
 url = "https://jutho.github.io/TensorKit.jl/stable/"
 icon = {file = "icons/TensorKit.png"}
 allow_js = true
-builds = []
 
 [ResumableFunctions]
 bundle_id = "resumablefunctions"
@@ -256,7 +227,6 @@ bundle_name = "ResumableFunctions.jl"
 platform_family = "resumablefunctions"
 uuid = "c5292f4c-5179-55e1-98c5-05642aab7184"
 url = "https://juliadynamics.github.io/ResumableFunctions.jl/stable/"
-builds = []
 
 [TensorOperations]
 bundle_id = "tensoroperations"
@@ -266,7 +236,6 @@ uuid = "6aa20fa7-93e2-5fca-9bc0-fbd0db3c71a2"
 url = "https://jutho.github.io/TensorOperations.jl/stable/"
 icon = {file = "icons/TensorOperations.png"}
 allow_js = true
-builds = []
 
 [Dagger]
 bundle_id = "dagger"
@@ -275,7 +244,6 @@ platform_family = "dagger"
 uuid = "d58978e5-989f-55fb-8d15-ea34adc7bf54"
 url = "https://juliaparallel.org/Dagger.jl/stable/"
 icon = {file = "icons/Dagger.png"}
-builds = []
 
 [StaticArrays]
 bundle_id = "staticarrays"
@@ -284,7 +252,6 @@ platform_family = "staticarrays"
 uuid = "90137ffa-7385-5640-81b9-e52037218182"
 url = "https://juliaarrays.github.io/StaticArrays.jl/stable/"
 icon = {file = "icons/JuliaArrays.png"}
-builds = []
 
 [NNlib]
 bundle_id = "nnlib"
@@ -293,7 +260,6 @@ platform_family = "nnlib"
 uuid = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"
 url = "https://fluxml.ai/NNlib.jl/{version}/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
-builds = []
 
 [Functors]
 bundle_id = "functors"
@@ -302,7 +268,6 @@ platform_family = "functors"
 uuid = "d9f16b24-f501-4c13-a1f2-28368ffc5196"
 url = "https://fluxml.ai/Functors.jl/{version}/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
-builds = []
 
 [Optimisers]
 bundle_id = "optimisers"
@@ -311,7 +276,6 @@ platform_family = "optimisers"
 uuid = "3bd65402-5787-11e9-1adc-39752487f4e2"
 url = "https://fluxml.ai/Optimisers.jl/dev/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
-builds = []
 
 [PropCheck]
 bundle_id = "propcheck"
@@ -319,7 +283,6 @@ bundle_name = "PropCheck.jl"
 platform_family = "propcheck"
 uuid = "ca382230-33be-11e9-0059-d981d03070e4"
 url = "https://seelengrab.github.io/PropCheck.jl/stable/"
-builds = []
 
 [MacroTools]
 bundle_id = "macrotools"
@@ -328,7 +291,6 @@ platform_family = "macrotools"
 uuid = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
 url = "http://fluxml.ai/MacroTools.jl/stable/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
-builds = []
 
 [Zygote]
 bundle_id = "zygote"
@@ -338,7 +300,6 @@ uuid = "e88e6eb3-aa80-5325-afca-941959d7151f"
 url = "https://fluxml.ai/Zygote.jl/{version}/"
 icon = {file = "icons/Zygote.png"}
 allow_js = true
-builds = []
 
 [IRTools]
 bundle_id = "irtools"
@@ -347,7 +308,6 @@ platform_family = "irtools"
 uuid = "7869d1d1-7146-5819-86e3-90919afe41df"
 url = "http://fluxml.ai/IRTools.jl/stable/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
-builds = []
 
 [OMEinsum]
 bundle_id = "omeinsum"
@@ -356,7 +316,6 @@ platform_family = "omeinsum"
 uuid = "ebe7aa44-baf0-506c-a96f-8464559b3922"
 url = "https://under-peter.github.io/OMEinsum.jl/dev/"
 allow_js = true
-builds = []
 
 [Metal]
 bundle_id = "metal"
@@ -365,7 +324,6 @@ platform_family = "metal"
 uuid = "dde4c033-4e86-420c-a63e-0dd931031962"
 url = "https://metal.juliagpu.org/stable/"
 icon = {file = "icons/JuliaGPU.png"}
-builds = []
 
 [Flux]
 bundle_id = "flux"
@@ -375,7 +333,6 @@ uuid = "587475ba-b771-5e3f-ad9e-33799f191a9c"
 url = "https://fluxml.ai/Flux.jl/stable/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 allow_js = true
-builds = []
 
 [DataFrames]
 bundle_id = "dataframes"
@@ -384,7 +341,6 @@ platform_family = "dataframes"
 uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 url = "https://dataframes.juliadata.org/v1.6.1/"
 icon = {url = "https://dataframes.juliadata.org/stable/assets/favicon.ico"}
-builds = []
 
 [Tenet]
 bundle_id = "tenet"
@@ -394,7 +350,6 @@ uuid = "85d41934-b9cd-44e1-8730-56d86f15f3ec"
 registry = "bsc-quantic/Registry"
 url = "https://bsc-quantic.github.io/Tenet.jl/stable/"
 allow_js = true
-builds = []
 
 [EinExprs]
 bundle_id = "einexprs"
@@ -404,4 +359,3 @@ uuid = "b1794770-133b-4de1-afb4-526377e9f4c5"
 registry = "bsc-quantic/Registry"
 url = "https://bsc-quantic.github.io/EinExprs.jl/stable/"
 allow_js = true
-builds = []

@@ -162,27 +162,3 @@ jobs:
           commit-message: "[Julia] ${{ matrix.name }} ${{ matrix.version }}"
           branch: ${{ steps.branch.outputs.name }}
           push-to-fork: mofeing/Dash-User-Contributions
-
-  mark-version:
-    needs: open-pr-in-dash-contrib
-    runs-on: ubuntu-latest
-    strategy:
-      matrix: ${{ fromJson(needs.open-pr-in-dash-contrib.outputs.matrix) }}
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.DASH_TOKEN }}
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.11.4'
-          cache: 'pip'
-      - run: pip install -r requirements.txt
-      - run: python update-package-version.py ${{ matrix.name }} ${{ matrix.version }}
-      - run: |
-          # log as 'github-actions[bot]'
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add --all
-          git commit -m "Bump ${{ matrix.name }} to version ${{ matrix.version }}"
-          git push -u origin HEAD

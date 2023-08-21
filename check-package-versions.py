@@ -19,6 +19,12 @@ registry_repo = Repo.clone_from(
     multi_options=["--single-branch", "--depth=1"],
 )
 
+docsets_repo = Repo.clone_from(
+    "https://github.com/Kapeli/Dash-User-Contributions.git",
+    mkdtemp(),
+    multi_options=["--single-branch", "--depth=1"],
+)
+
 with open(os.path.join(registry_repo.working_tree_dir, "Registry.toml"), "r") as fh:
     registry = tomlkit.load(fh)
 
@@ -42,9 +48,14 @@ for name, path in paths.items():
     ) as fh:
         last_version = max(map(semver.Version.parse, tomlkit.load(fh).keys()))
 
-    last_docset_version = max(
-        map(semver.Version.parse, pkgs[name]["builds"]), default=semver.Version(0)
-    )
+    docset_json = os.path.join(docsets_repo.working_tree_dir, pkgs[name]["bundle_name"], "docset.json")
+    if not os.path.exists(docset_json):
+        targets[name] = last_version
+        print(f"{name} => {last_version}")
+        continue
+
+    with open(docset_json, "r") as fh:
+        last_docset_version = semver.Version.parse(json.load(fh)["version"])
 
     if last_docset_version < last_version:
         targets[name] = last_version
