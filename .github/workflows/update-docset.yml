@@ -108,6 +108,7 @@ jobs:
           cd $GITHUB_WORKSPACE/Dash-User-Contributions
 
           mkdir -p docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
+          cp $GITHUB_WORKSPACE/${{ matrix.bundle_name }}.tgz docsets/${{ matrix.bundle_name }}
           cp $GITHUB_WORKSPACE/${{ matrix.bundle_name }}.tgz docsets/${{ matrix.bundle_name }}/versions/${{ matrix.version }}
           cd docsets/${{ matrix.bundle_name }}
 
