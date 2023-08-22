@@ -51,7 +51,7 @@ for name, path in paths.items():
     docset_json = os.path.join(docsets_repo.working_tree_dir, pkgs[name]["bundle_name"], "docset.json")
     if not os.path.exists(docset_json):
         targets[name] = last_version
-        print(f"{name} => {last_version}")
+        print(f"{name} => {last_version} [new package]")
         continue
 
     with open(docset_json, "r") as fh:
@@ -59,7 +59,7 @@ for name, path in paths.items():
 
     if last_docset_version < last_version:
         targets[name] = last_version
-        print(f"{name} => {last_version}")
+        print(f"{name} => {last_version} [old: {last_docset_version}]")
 
 # format for GITHUB_OUTPUT
 if len(targets) != 0:
