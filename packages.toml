@@ -59,7 +59,7 @@ bundle_id = "dagger"
 bundle_name = "Dagger.jl"
 platform_family = "dagger"
 uuid = "d58978e5-989f-55fb-8d15-ea34adc7bf54"
-url = "https://juliaparallel.org/Dagger.jl/stable/"
+url = "https://juliaparallel.org/Dagger.jl/{version}/"
 icon = {file = "icons/Dagger.png"}
 
 [DataFrames]
