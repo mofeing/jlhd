@@ -163,7 +163,7 @@ bundle_id = "kernelabstractions"
 bundle_name = "KernelAbstractions.jl"
 platform_family = "kernelabstractions"
 uuid = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
-url = "https://juliagpu.github.io/KernelAbstractions.jl/stable/"
+url = "https://juliagpu.github.io/KernelAbstractions.jl/{version}/"
 icon = {file = "icons/JuliaGPU.png"}
 
 [LazyArrays]
