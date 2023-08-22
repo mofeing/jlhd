@@ -123,7 +123,7 @@ class Docset:
 
                     # register sections
                     for tag in soup.select("h1 > .docs-heading-anchor"):
-                        name = tag.parent.text.replace("'", "''").strip('\n ')
+                        name = tag.parent.get_text(" ", strip=True).replace("'", "''")
                         href = tag["href"]
                         path = os.path.join(
                             os.path.relpath(root, start=content), filename, href
