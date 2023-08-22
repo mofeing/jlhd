@@ -123,7 +123,7 @@ bundle_id = "folds"
 bundle_name = "Folds.jl"
 platform_family = "folds"
 uuid = "41a02a25-b8f0-4f67-bc48-60067656b558"
-url = "https://juliafolds.github.io/Folds.jl/stable/"
+url = "https://juliafolds.github.io/Folds.jl/{version}/"
 icon = {file = "icons/Transducers.png"}
 
 [Functors]
