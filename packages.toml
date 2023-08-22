@@ -11,7 +11,7 @@ bundle_id = "binarytraits"
 bundle_name = "BinaryTraits.jl"
 platform_family = "binarytraits"
 uuid = "190e46ec-f771-4705-b939-984896f7be0e"
-url = "https://tk3369.github.io/BinaryTraits.jl/stable/"
+url = "https://tk3369.github.io/BinaryTraits.jl/{version}/"
 
 [BlockArrays]
 bundle_id = "blockarrays"
