@@ -187,7 +187,7 @@ bundle_id = "loweredcodeutils"
 bundle_name = "LoweredCodeUtils.jl"
 platform_family = "loweredcodeutils"
 uuid = "6f1432cf-f94c-5a45-995e-cdbf5db27b0b"
-url = "https://juliadebug.github.io/LoweredCodeUtils.jl/stable/"
+url = "https://juliadebug.github.io/LoweredCodeUtils.jl/{version}/"
 
 [MacroTools]
 bundle_id = "macrotools"
