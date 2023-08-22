@@ -48,7 +48,7 @@ for name, path in paths.items():
     ) as fh:
         last_version = max(map(semver.Version.parse, tomlkit.load(fh).keys()))
 
-    docset_json = os.path.join(docsets_repo.working_tree_dir, pkgs[name]["bundle_name"], "docset.json")
+    docset_json = os.path.join(docsets_repo.working_tree_dir, "docsets", pkgs[name]["bundle_name"], "docset.json")
     if not os.path.exists(docset_json):
         targets[name] = last_version
         print(f"{name} => {last_version} [new package]")
