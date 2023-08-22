@@ -67,7 +67,7 @@ bundle_id = "dataframes"
 bundle_name = "DataFrames.jl"
 platform_family = "dataframes"
 uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
-url = "https://dataframes.juliadata.org/v1.6.1/"
+url = "https://dataframes.juliadata.org/{version}/"
 icon = {url = "https://dataframes.juliadata.org/stable/assets/favicon.ico"}
 
 [EinExprs]
