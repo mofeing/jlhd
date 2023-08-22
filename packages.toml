@@ -27,7 +27,7 @@ bundle_id = "cassette"
 bundle_name = "Cassette.jl"
 platform_family = "cassette"
 uuid = "7057c7e9-c182-5462-911a-8362d720325c"
-url = "https://julia.mit.edu/Cassette.jl/stable/"
+url = "https://julia.mit.edu/Cassette.jl/{version}/"
 icon = {file = "icons/Cassette.png"}
 
 [CategoricalArrays]
