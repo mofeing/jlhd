@@ -52,7 +52,7 @@ bundle_id = "comonicon"
 bundle_name = "Comonicon.jl"
 platform_family = "comonicon"
 uuid = "863f3e99-da2a-4334-8734-de3dacbe5542"
-url = "https://comonicon.org/stable/"
+url = "https://comonicon.org/{version}/"
 
 [Dagger]
 bundle_id = "dagger"
