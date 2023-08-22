@@ -114,7 +114,7 @@ bundle_id = "flux"
 bundle_name = "Flux.jl"
 platform_family = "flux"
 uuid = "587475ba-b771-5e3f-ad9e-33799f191a9c"
-url = "https://fluxml.ai/Flux.jl/stable/"
+url = "https://fluxml.ai/Flux.jl/{version}/"
 icon = {url = "https://fluxml.ai/assets/favicon_io/favicon.ico"}
 allow_js = true
 
