@@ -233,7 +233,7 @@ bundle_id = "octavian"
 bundle_name = "Octavian.jl"
 platform_family = "octavian"
 uuid = "6fd5a793-0b7e-452c-907f-f8bfe9c57db4"
-url = "https://octavian.julialinearalgebra.org/stable/"
+url = "https://octavian.julialinearalgebra.org/{version}/"
 icon = {file = "icons/JuliaLinearAlgebra.png"}
 
 [OffsetArrays]
