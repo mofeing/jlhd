@@ -1,3 +1,11 @@
+[ArraysOfArrays]
+bundle_id = "arraysofarrays"
+bundle_name = "ArraysOfArrays.jl"
+platform_family = "arraysofarrays"
+uuid = "65a8f2f4-9b39-5baf-92e2-a9cc46fdf018"
+url = "https://juliaarrays.github.io/ArraysOfArrays.jl/{version}/"
+icon = {file = "icons/JuliaArrays.png"}
+
 [BinaryTraits]
 bundle_id = "binarytraits"
 bundle_name = "BinaryTraits.jl"
@@ -21,6 +29,14 @@ platform_family = "cassette"
 uuid = "7057c7e9-c182-5462-911a-8362d720325c"
 url = "https://julia.mit.edu/Cassette.jl/stable/"
 icon = {file = "icons/Cassette.png"}
+
+[CategoricalArrays]
+bundle_id = "categoricalarrays"
+bundle_name = "CategoricalArrays.jl"
+platform_family = "categoricalarrays"
+uuid = "65a8f2f4-9b39-5baf-92e2-a9cc46fdf018"
+url = "https://categoricalarrays.juliadata.org/{version}/"
+icon = {file = "icons/JuliaArrays.png"}
 
 [ChainRules]
 bundle_id = "chainrules"
@@ -76,6 +92,14 @@ bundle_name = "ExprTools.jl"
 platform_family = "exprtools"
 uuid = "e2ba6199-217a-4e67-a87a-7c52f15ade04"
 url = "https://invenia.github.io/ExprTools.jl/stable/"
+
+[FillArrays]
+bundle_id = "fillarrays"
+bundle_name = "FillArrays.jl"
+platform_family = "fillarrays"
+uuid = "1a297f60-69ca-5386-bcde-b61e274b549b"
+url = "https://juliaarrays.github.io/FillArrays.jl/stable/"
+icon = {file = "icons/JuliaArrays.png"}
 
 [Finch]
 bundle_id = "finch"
@@ -142,6 +166,14 @@ uuid = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
 url = "https://juliagpu.github.io/KernelAbstractions.jl/stable/"
 icon = {file = "icons/JuliaGPU.png"}
 
+[LazyArrays]
+bundle_id = "lazyarrays"
+bundle_name = "LazyArrays.jl"
+platform_family = "lazyarrays"
+uuid = "5078a376-72f3-5289-bfd5-ec5146d43c02"
+url = "https://juliaarrays.github.io/LazyArrays.jl/dev/"
+icon = {file = "icons/JuliaArrays.png"}
+
 [LoopVectorization]
 bundle_id = "loopvectorization"
 bundle_name = "LoopVectorization.jl"
@@ -203,6 +235,14 @@ platform_family = "octavian"
 uuid = "6fd5a793-0b7e-452c-907f-f8bfe9c57db4"
 url = "https://octavian.julialinearalgebra.org/stable/"
 icon = {file = "icons/JuliaLinearAlgebra.png"}
+
+[OffsetArrays]
+bundle_id = "offsetarrays"
+bundle_name = "OffsetArrays.jl"
+platform_family = "offsetarrays"
+uuid = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
+url = "https://juliaarrays.github.io/OffsetArrays.jl/{version}/"
+icon = {file = "icons/JuliaArrays.png"}
 
 [Optimisers]
 bundle_id = "optimisers"
@@ -277,6 +317,14 @@ bundle_name = "StaticArrays.jl"
 platform_family = "staticarrays"
 uuid = "90137ffa-7385-5640-81b9-e52037218182"
 url = "https://juliaarrays.github.io/StaticArrays.jl/stable/"
+icon = {file = "icons/JuliaArrays.png"}
+
+[StructArrays]
+bundle_id = "structarrays"
+bundle_name = "StructArrays.jl"
+platform_family = "structarrays"
+uuid = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
+url = "https://juliaarrays.github.io/StructArrays.jl/{version}/"
 icon = {file = "icons/JuliaArrays.png"}
 
 [Tenet]
