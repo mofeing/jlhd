@@ -272,7 +272,7 @@ bundle_id = "pkg"
 bundle_name = "Pkg.jl"
 platform_family = "pkg"
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
-url = "https://pkgdocs.julialang.org/v1/"
+url = "https://pkgdocs.julialang.org/{version}/"
 icon = {file = "icons/Pkg.png"}
 
 [Polyester]
@@ -309,7 +309,7 @@ bundle_id = "rocket"
 bundle_name = "Rocket.jl"
 platform_family = "rocket"
 uuid = "df971d30-c9d6-4b37-b8ff-e965b2cb3a40"
-url = "https://biaslab.github.io/Rocket.jl/stable/"
+url = "https://biaslab.github.io/Rocket.jl/{version}/"
 
 [StaticArrays]
 bundle_id = "staticarrays"
