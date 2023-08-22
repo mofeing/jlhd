@@ -84,7 +84,7 @@ bundle_id = "exprparsers"
 bundle_name = "ExprParsers.jl"
 platform_family = "exprparsers"
 uuid = "c5caad1f-83bd-4ce8-ac8e-4b29921e994e"
-url = "https://jolin-io.github.io/ExprParsers.jl/stable/"
+url = "https://jolin-io.github.io/ExprParsers.jl/{version}/"
 
 [ExprTools]
 bundle_id = "exprtools"
