@@ -106,7 +106,7 @@ bundle_id = "finch"
 bundle_name = "Finch.jl"
 platform_family = "finch"
 uuid = "9177782c-1635-4eb9-9bfb-d9dfa25e6bce"
-url = "http://willowahrens.io/Finch.jl/stable/"
+url = "http://willowahrens.io/Finch.jl/{version}/"
 icon = {url = "http://willowahrens.io/Finch.jl/stable/assets/favicon.ico"}
 
 [Flux]
