@@ -30,14 +30,6 @@ uuid = "7057c7e9-c182-5462-911a-8362d720325c"
 url = "https://julia.mit.edu/Cassette.jl/{version}/"
 icon = {file = "icons/Cassette.png"}
 
-[CategoricalArrays]
-bundle_id = "categoricalarrays"
-bundle_name = "CategoricalArrays.jl"
-platform_family = "categoricalarrays"
-uuid = "65a8f2f4-9b39-5baf-92e2-a9cc46fdf018"
-url = "https://categoricalarrays.juliadata.org/{version}/"
-icon = {file = "icons/JuliaArrays.png"}
-
 [ChainRules]
 bundle_id = "chainrules"
 bundle_name = "ChainRules.jl"
