@@ -359,7 +359,7 @@ bundle_id = "transducers"
 bundle_name = "Transducers.jl"
 platform_family = "transducers"
 uuid = "28d57a85-8fef-5791-bfe6-a80928e7c999"
-url = "https://juliafolds.github.io/Transducers.jl/{version}/"
+url = "https://juliafolds2.github.io/Transducers.jl/{version}/"
 icon = {file = "icons/Transducers.png"}
 
 [Zygote]
